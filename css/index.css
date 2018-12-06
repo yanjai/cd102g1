@@ -1,0 +1,1748 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/*模組CSS button start*/
+/*按鈕1 start*/
+button {
+  font-family: "微軟正黑體";
+  font-size: 16px;
+  background: #07336e;
+  color: #fff;
+  border: none;
+  padding: 8px 15px; }
+  button a {
+    color: #fff;
+    text-decoration: none; }
+
+button:hover {
+  background: #30abdb;
+  cursor: pointer; }
+
+/*按鈕1 end*/
+/*按鈕2 start*/
+.button {
+  background-color: #7eafc7;
+  color: #fff;
+  text-align: center;
+  transition: all 0.5s;
+  display: inline-block;
+  cursor: pointer;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 20px; }
+  .button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.4s; }
+    .button span a {
+      color: #fff;
+      text-decoration: none; }
+
+.button {
+  margin-bottom: 800px; }
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s; }
+
+.button:hover {
+  background: #59a9ba; }
+  .button:hover span {
+    padding-right: 25px; }
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0; }
+
+/*按鈕2 end*/
+/*模組CSS button end*/
+/*首頁 CSS START*/
+body {
+  font-size: 16px;
+  color: #000; }
+
+h1 {
+  font-size: 28px; }
+
+h2 {
+  font-size: 26px; }
+
+h3 {
+  font-size: 24px; }
+
+h4 {
+  font-size: 22px; }
+
+h5 {
+  font-size: 20px; }
+
+h6 {
+  font-size: 18px; }
+
+p {
+  font-size: 16px;
+  line-height: 18px; }
+
+body {
+  overflow: hidden; }
+
+svg.loading {
+  margin-left: 5%; }
+
+.inIndexBg {
+  background-image: url("../images/index_first_bg.jpg");
+  background-size: cover; }
+  .inIndexBg .tableCell {
+    margin: auto;
+    display: flex;
+    align-items: center; }
+
+.inIndexMenu {
+  max-width: 400px;
+  height: auto;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  left: 0;
+  z-index: 5;
+  display: block; }
+
+.intextFont {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  display: inline-block;
+  padding: 20px;
+  background: rgba(245, 254, 255, 0.2);
+  position: relative;
+  z-index: 2; }
+
+.indexWetsuitBox {
+  width: 25%;
+  position: absolute;
+  top: 10%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  text-align: center; }
+
+.indexWetsuit {
+  position: relative; }
+
+.animateupAnddown {
+  animation: animateupAnddown 3s linear infinite; }
+
+@keyframes animateupAnddown {
+  0% {
+    top: 20px; }
+  50% {
+    top: 0px; }
+  100% {
+    top: 20px; } }
+
+.indexWetsuitCircle {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  right: 0%;
+  bottom: 0%;
+  margin: auto;
+  text-align: center;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.8); }
+
+.indexWetsuitCircle1 {
+  top: -40%;
+  left: 6%;
+  animation: indexWetsuitCircleanimate1 2s linear;
+  animation-delay: 2.1s; }
+
+@keyframes indexWetsuitCircleanimate1 {
+  0% {
+    opacity: 0;
+    display: none;
+    transition: transform 0.3s;
+    transform: rotate(0deg); }
+  100% {
+    opacity: 1;
+    display: block;
+    transition: transform 0.3s;
+    transform: rotate(360deg); } }
+
+.indexWetsuitCircle2 {
+  top: -47%;
+  left: -11%; }
+
+.indexWetsuitCircle3 {
+  top: 47%;
+  left: -10%; }
+
+.indexWetsuitLine {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  right: 0%;
+  bottom: 0%;
+  width: 10%;
+  margin: auto;
+  text-align: center;
+  height: 1px;
+  background: #9be4ff; }
+
+.indexWetsuitLine1 {
+  top: -40%;
+  left: 16%;
+  width: 10%;
+  animation: indexWetsuitLineanimate 2s linear forwards;
+  animation-delay: 3.8s;
+  transform-origin: 0% 100%;
+  opacity: 0; }
+
+@keyframes indexWetsuitLineanimate {
+  0% {
+    opacity: 0;
+    transform: scaleX(0); }
+  100% {
+    opacity: 1;
+    transform: scaleX(1); } }
+
+.indexWetsuitLine2 {
+  top: -47%;
+  left: -21%;
+  width: 10%;
+  animation: indexWetsuitLineanimate 2s linear forwards;
+  animation-delay: 3.9s;
+  transform-origin: 100% 100%;
+  opacity: 0; }
+
+.indexWetsuitLine3 {
+  width: 12%;
+  top: 47%;
+  left: -23%;
+  animation: indexWetsuitLineanimate 2s linear forwards;
+  animation-delay: 4.0s;
+  transform-origin: 100% 100%;
+  opacity: 0; }
+
+.indexWetsuitText1 {
+  color: #fff;
+  position: absolute;
+  top: 29%;
+  left: 63.5%; }
+
+.indexWetsuitText2 {
+  color: #fff;
+  position: absolute;
+  top: 25.5%;
+  left: 30.5%; }
+
+.indexWetsuitText3 {
+  color: #fff;
+  position: absolute;
+  top: 72.5%;
+  left: 28.5%; }
+
+.inloader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  text-align: center; }
+
+.loader-content {
+  height: 0;
+  width: 100%;
+  padding-bottom: 188.15%; }
+
+.indexWetsuit img {
+  width: 100%; }
+
+.indexWetsuit {
+  height: 0;
+  width: 100%;
+  display: block;
+  padding-bottom: 188.15%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto; }
+
+.inIndexFirstTitle {
+  text-align: center;
+  width: 100%; }
+  .inIndexFirstTitle h2 {
+    color: #fff;
+    font-size: 2em;
+    font-family: 'Anton', sans-serif; }
+
+.indexWetsuit img{
+  position: absolute;
+  top:0;
+  left: 0;
+  bottom:0;
+  right: 0;
+  margin:auto;
+
+}
+.indexWetsuit img:before{
+  content: '';
+  height: 100%;
+  display: inline-block;
+  vertical-align: middle;
+}    
+
+.inIndexFirstTitle h1 {
+  color: #fff;
+  font-size: 7em;
+  font-family: 'Black Han Sans', 'sans-serif',Arial; }
+
+.inIndexFirstTitle span {
+  color: #fff;
+  font-size: 1.5em;
+  font-family: 'Anton', sans-serif; }
+
+.inIndexMenu img {
+  width: 70%;
+  margin: 5px 20px 80px 20px;
+  position: relative;
+  left: 28px; }
+
+.inIndexMenu ul {
+  text-align: right; }
+  .inIndexMenu ul li {
+    padding: 10px;
+    font-size: 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); }
+    .inIndexMenu ul li a {
+      text-decoration: none;
+      color: #fff;
+      margin: 10px; }
+
+.inIndexMenu ul li .fa-user{
+  float:none;
+  display: inline;
+}
+#inmemUp{
+  float: none;
+  display: inline;
+  margin: -8px;
+
+}
+
+#spanLogin2{
+  font-weight: bold;
+  color: #b3e5f7;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.inIndexMenu ul li a:hover {
+        color: #3db7e4; }
+
+.inIndexMenu ul li i {
+  margin: 10px;
+  color: #fff; }
+
+.inIndexMenu ul li:last-child {
+  border-bottom: none;
+  cursor: pointer; }
+
+.inIndexBgCloth {
+  background-image: url("../images/index_second_bg.jpg");
+  background-size: cover;
+  position: relative;
+  z-index: 5; }
+  .inIndexBgCloth h2 {
+    color: #fff;
+    text-align: center;
+    margin: 60px auto 60px auto; }
+
+.inIndexBgCoachTeam {
+  background-image: url("../images/index_forth2_bg.jpg");
+  background-size: cover; }
+  .inIndexBgCoachTeam h2 {
+    color: #fff;
+    text-align: center;
+    margin: 60px auto 60px auto; }
+
+.inIndexBgAbout {
+  background-image: url("../images/index_fifth_bg.jpg");
+  background-size: cover; }
+  .inIndexBgAbout h2 {
+    color: #fff;
+    text-align: center;
+    margin: 60px auto 60px auto; }
+
+.inIndexVideo h2 {
+  color: #fff;
+  text-align: center;
+  margin: 60px auto 60px auto;
+  position: relative;
+  z-index: 2; }
+
+.inwetsuitLine {
+  width: 600px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+  z-index: 1; }
+
+.intextEffect h1 {
+  background: url("../images/index_water.png") no-repeat;
+  background-position: bottom center;
+  background-size: cover;
+  color: #fff;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  animation: water 5s linear infinite !important; }
+
+@keyframes water {
+  0% {
+    background-positon: center center;
+    opacity: 0; }
+  25% {
+    background-positon: top center;
+    opacity: 0.5; }
+  50% {
+    background-positon: bottom center;
+    opacity: 0.8; }
+  100% {
+    background-positon: center center;
+    opacity: 1; } }
+
+.animateIndex {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  animation-name: fadeInTop; }
+
+@keyframes fadeInTop {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0); }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none; } }
+
+.animateIndexLittleLate {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  animation-name: fadeInTop;
+  animation-delay: 0.3s; }
+
+@keyframes fadeInTop {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0); }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none; } }
+
+.animateIndexDelay {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-delay: 2.5s;
+  animation-delay: 2.5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  animation-name: fadeInTopDelay; }
+
+@keyframes fadeInTopDelay {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0); }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none; } }
+
+.animateIndexDelay2 {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-delay: 4.1s;
+  animation-delay: 4.1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  animation-name: fadeInTopDelay; }
+
+@keyframes fadeInTopDelay {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -800%, 0);
+    transform: translate3d(0, -800%, 0); }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none; } }
+
+.animateIndexDelay3 {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-delay: 4.1s;
+  animation-delay: 4.1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  animation-name: fadeInTopDelay; }
+
+@keyframes fadeInTopDelay {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -500%, 0);
+    transform: translate3d(0, -500%, 0); }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none; } }
+
+#indexSvg {
+  display: none;
+  animation: indexSvganimate 3.5s linear; 
+  position: absolute;
+  top: 66px;
+  left: -20px;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+
+}
+
+@keyframes indexSvganimate {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+.animateIndexPatternLeft1 {
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  animation-name: fadeInleftPattern1; }
+
+@keyframes fadeInleftPattern1 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0); }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none; } }
+
+.animateIndexPatternLeft2 {
+  -webkit-animation-duration: 0.75s;
+  animation-duration: 0.75s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  animation-name: fadeInleftPattern2; }
+
+@keyframes fadeInleftPattern2 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0); }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none; } }
+
+.animateIndexPatternLeft3 {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  animation-name: fadeInleftPattern3; }
+
+@keyframes fadeInleftPattern3 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0); }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none; } }
+
+.animateIndexAbout {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  animation-name: fadeInleft; }
+
+@keyframes fadeInleft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0); }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none; } }
+
+.animateIndexAboutRight {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  animation-name: fadeInright; }
+
+@keyframes fadeInright {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0); }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none; } }
+
+li.inshopcart a:hover, li.inshopcart:hover span, .incart:hover, .inshopcart i {
+  color: #ffb453; }
+
+span.incart {
+  font-weight: bold;
+  cursor: pointer; }
+
+.inIndexMenu ul li.inlogin, .inIndexMenu ul li.inshopcart {
+  padding: 2px; }
+
+.inIndexMenu ul li.inlogin{
+  padding: 2px 10px;
+}
+
+/*第二屏 start*/
+.inCustomWetsuitAll {
+  color: #fff;
+  margin: auto;
+  max-width: 1200px;
+  display: flex; }
+
+.indexLogoBox {
+  width: 33.3%; }
+
+.indexLogo {
+  width: 100%;
+  height: 0;
+  padding-bottom: 148.15%; }
+
+.inCustomProcess {
+  width: 35%; }
+
+.inCustomWetsuit {
+  width: 30%; }
+
+.indexLogo {
+  display: flex;
+  flex-direction: column;
+  position: relative; }
+  .indexLogo img {
+    border-radius: 50%;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.4);
+    margin: 5px 0;
+    -webkit-animation: warn 2s ease-out;
+    -moz-animation: warn 2s ease-out;
+    animation: warn 2s ease-out;
+    box-shadow: 1px 1px 15px #fff; }
+
+@keyframes warn {
+  0% {
+    transform: scale(0.5);
+    -webkit-transform: scale(0.5);
+    opacity: 0.4; }
+  25% {
+    transform: scale(0.5);
+    -webkit-transform: scale(0.5);
+    opacity: 0.5; }
+  50% {
+    transform: scale(0.8);
+    -webkit-transform: scale(0.8);
+    opacity: 0.6; }
+  75% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    opacity: 0.8; }
+  100% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    opacity: 1; } }
+
+.indexCircle {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #fff; }
+
+.indexCircle1 {
+  position: absolute;
+  top: 11%;
+  left: -2%; }
+
+.indexCircle2 {
+  display: none;
+  position: absolute;
+  top: 35%;
+  left: 26%; }
+
+.indexCircle3 {
+  display: none;
+  position: absolute;
+  top: 59%;
+  left: 26%; }
+
+.indexCircle4 {
+  display: none;
+  position: absolute;
+  top: 80%;
+  left: -2%; }
+
+.indexLine {
+  height: 1px;
+  background: #fff;
+  position: absolute; }
+
+.indexLine1 {
+  width: 44%;
+  top: 15.5%;
+  left: -42%;
+  transform: rotate(-14deg);
+  animation: indexLineMove1 0.2s linear; }
+
+@keyframes indexLineMove1 {
+  from {
+    width: 0%; }
+  to {
+    width: 45%; } }
+
+.indexLine2 {
+  display: none;
+  width: 75%;
+  top: 31%;
+  left: -45%;
+  transform: rotate(13deg);
+  animation: indexLineMove2 0.2s linear; }
+
+@keyframes indexLineMove2 {
+  from {
+    width: 0%; }
+  to {
+    width: 75%; } }
+
+.indexLine3 {
+   display: none;
+    width: 89%;
+    top: 45%;
+    left: -56%;
+    transform: rotate(30deg);
+    animation: indexLineMove3 0.2s linear; }
+
+@keyframes indexLineMove3 {
+  from {
+    width: 0%; }
+  to {
+    width: 94%; } }
+
+.indexLine4 {
+  display: none;
+  width: 101%;
+  top: 55%;
+  left: -71%;
+  transform: rotate(63deg);
+  animation: indexLineMove4 0.2s linear; }
+
+@keyframes indexLineMove4 {
+  from {
+    width: 0%; }
+  to {
+    width: 103%; } }
+
+.addpatternclass1 {
+  background: #fff;
+  border-radius: 50%;
+  padding: 5px; }
+
+.addpatternclass2 {
+  background: #ffbe5e;
+  border-radius: 50%;
+  padding: 5px; }
+
+.addpatternclass3 {
+  background: #a1d6da;
+  border-radius: 50%;
+  padding: 5px; }
+
+.addpatternclass4 {
+  background: #ffe7a1;
+  border-radius: 50%;
+  padding: 5px; }
+
+.inCustomWetsuit {
+  display: flex;
+  flex-direction: row; }
+
+.inCustomProcess h4 {
+  margin: 40px auto;
+  text-align: center; }
+
+.inCustomProcess .num p {
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 3.5em;
+  font-weight: bold;
+  font-style: italic;
+  color: #30abdb;
+  padding: 10px 20px;
+  line-height: 60px; }
+
+.stepOne p, .stepTwo p, .stepThree p {
+  padding: 10px 20px; }
+
+.indexButton {
+  margin: auto;
+  padding-top: 60px;
+  text-align: center; }
+
+.inCustomWetsuit img {
+  width: 100%;
+  margin: auto; }
+
+.inCustomWetsuit {
+  position: relative; }
+  .inCustomWetsuit .patternOneSmall {
+    width: 68px;
+    height: 71px;
+    position: absolute;
+    left: -15px;
+    right: 0;
+    margin: auto;
+    top: calc(16%); }
+
+.indexLogo .patternOne, .indexLogo .patternForth {
+  align-self: flex-start; }
+
+.indexLogo .patternTwo, .indexLogo .patternThree {
+  align-self: center; }
+
+.indexLogo .patternTwo {
+  margin: 10px; }
+
+.patternOne, .patternTwo, .patternThree, .patternForth {
+  cursor: pointer;
+  position: relative; }
+
+.stepOne, .stepTwo, .stepThree {
+  display: flex;
+  margin: 20px;
+  padding: 10px 0 30px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5); }
+
+.patternOne img:hover {
+  background: #fff !important; }
+
+.patternTwo img:hover {
+  background: #ffbe5e !important; }
+
+.patternThree img:hover {
+  background: #a1d6da !important; }
+
+.patternForth img:hover {
+  background: #ffe7a1 !important; }
+
+.indexPattern1 {
+  animation: indexPattern1 0.2s linear !important; }
+
+@keyframes indexPattern1 {
+  0% {
+    left: -50px; }
+  100% {
+    left: 0px; } }
+
+.indexPattern2 {
+  animation: indexPattern2 0.4s linear !important; }
+
+@keyframes indexPattern2 {
+  0% {
+    left: -50px; }
+  100% {
+    left: 0px; } }
+
+.indexPattern3 {
+  animation: indexPattern3 0.6s linear !important; }
+
+@keyframes indexPattern3 {
+  0% {
+    left: -50px; }
+  100% {
+    left: 0px; } }
+
+.indexPattern4 {
+  animation: indexPattern4 0.8s linear !important; }
+
+@keyframes indexPattern4 {
+  0% {
+    left: -50px; }
+  100% {
+    left: 0px; } }
+
+/*選單動畫 start*/
+
+.modal{
+  z-index: 999;
+}
+.inwaveEffect1 {
+  text-transform: uppercase;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  font-size: 100pt;
+  text-align: center;
+  height: 120px;
+  line-height: 110px;
+  vertical-align: bottom;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100px;
+  bottom: 0;
+  display: block; }
+
+@keyframes wave-animation {
+  0% {
+    background-position: 0 bottom; }
+  100% {
+    background-position: 200px bottom; } }
+
+@keyframes loading-animation {
+  0% {
+    background-size: 200px 0px; }
+  100% {
+    background-size: 200px 200px; } }
+
+.indexwave {
+  background-image: url("../images/index_wave_line.png");
+  color: #fff;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  text-shadow: 0px 0px rgba(155, 255, 255, 0.06), 0px 0px rgba(155, 255, 255, 0.35);
+  animation: wave-animation 3s infinite linear, loading-animation 4s infinite linear alternate;
+  background-size: 200px 100px;
+  background-repeat: repeat-x;
+  opacity: 1; }
+
+.inwaveEffect2 {
+  text-align: center;
+  font-size: 55px;
+  margin-top: 350px;
+  font-family: Arial;
+  animation: wave-animation 2.5s infinite linear, loading-animation 10s infinite linear alternate; }
+
+/*選單動畫 end*/
+/*選單 start*/
+
+
+span#memName2 {
+    color: #b3e5f7;
+    font-weight: bold;
+}
+
+.inHanMenu {
+  position: fixed;
+  text-align: right;
+  left: 5%;
+  top: 5%;
+  cursor: pointer;
+  z-index: 999;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #07336e;
+  display: none; }
+
+.inhan {
+  width: 25px;
+  height: 3px;
+  margin: 6px auto;
+  background-color: #b3e5f7;
+  display: block;
+  transition: 1s; }
+
+.inhan.hanTop {
+  margin-top: 30px; }
+
+ul.inNav li {
+  margin: 10px; }
+  ul.inNav li a {
+    text-decoration: none;
+    padding: 16px;
+    font-size: 20px;
+    font-weight: bold; }
+
+.inNav span.incart {
+  font-size: 18px;
+  margin-left: 5px; }
+
+.inNav .fa-user {
+  font-size: 20px; }
+
+.inNav #spanLogin {
+  font-size: 18px;
+  font-weight: 500; }
+
+.inoverlay {
+  height: 100%;
+  width: 25%;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: -100%;
+  background-color: rgba(7, 51, 110, 0.9);
+  transition: .8s; }
+
+.inoverlayContent {
+  position: relative;
+  top: 13%;
+  width: 100%;
+  text-align: center; }
+
+ #spanLogin{
+  padding-left:0; 
+ } 
+
+.inoverlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #b3e5f7;
+  display: block;
+  transition: 0.3s; }
+
+.inoverlay a:hover, .overlay a:focus {
+  color: #f1f1f1; }
+
+.inLogin #bar:hover, .inLogin #bar:hover span, .inoverlay #spanLogin:hover {
+  color: #ffb453; }
+
+span.incart:hover, i.fas:hover, i.fa-user:hover, .inNav i#bar:hover:before, .inLogin:hover {
+  color: #ffb453; }
+
+.inoverlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px; }
+
+#main {
+  width: 25%; }
+
+@media screen and (max-height: 450px) {
+  .overlay a {
+    font-size: 20px; }
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px; } }
+
+.inNav i#bar, .inNav #spanLogin {
+  color: #b2e4f6;
+  font-weight: bold; }
+
+
+.inNav #spanLogin {
+    vertical-align: baseline;
+}  
+
+.inIndexMenu li:last-child a:hover {
+  color: #ffb453; }
+
+.inIndexMenu #bar:hover, .inIndexMenu #spanLogin:hover, .inIndexMenu .fa-cart-plus:hover {
+  color: #ffb453;
+  cursor: pointer; }
+
+/*選單 end*/
+.inCustomProcessBox {
+  width: 100%;
+  height: 0px;
+  padding-bottom: 146%;
+  border: 1px solid rgba(255, 255, 255, 0.3); }
+
+.inCustomWetsuitBox {
+  width: 100%;
+  height: 0px;
+  padding-bottom: 148.15%; }
+
+.inCustomWetsuitBox img {
+  width: 100%; }
+
+.inCustomProcess.section05 {
+  margin: auto; }
+
+/*第二屏 end*/
+/*第三屏 start*/
+.indexPopularEvent {
+  position: absolute;
+  padding: 30px;
+  z-index: 2;
+  width: 50%;
+  left: 0%;
+  right: 0%;
+  margin: auto;
+  top: 10%; }
+
+.indexVideoText .inActive1, .indexVideoText .inActive2, .indexVideoText .inActive3 {
+  display: inline-block; }
+
+.indexVideoText {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  top: 40%;
+  left: 0%;
+  right: 0%;
+  margin: auto;
+  text-align: center; }
+  .indexVideoText p {
+    text-align: center;
+    color: #081661; }
+
+.indexVideoText .tab {
+  display: inline-block;
+  text-decoration: none;
+  color: #000;
+  text-align: center;
+  position: relative;
+  bottom: -1px; }
+
+.indexPopularEventBox {
+  max-width: 1200px;
+  margin: auto; }
+
+.indexVideoText .tab.active {
+  border-bottom: none; }
+
+.incontentGroup .content {
+  padding: 20px;
+  display: none; }
+
+.incontentGroup .content.active {
+  display: block; }
+
+.inturtleDark {
+  display: none; }
+
+video {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  min-width: 100%;
+  min-height: 100%;
+  height: auto;
+  width: auto;
+  object-fit: cover; }
+
+.indexVideoText h4 {
+  line-height: 1.5;
+  text-shadow: 2px 2px 4px rgba(50,50,50,.6);
+  color: #fff;
+  position: relative;
+  top: -50px; }
+
+.incontentGroup p {
+  line-height: 1.5;
+  text-shadow: 2px 2px 4px rgba(50,50,50,.6); 
+  color: #fff; }
+
+.incontentGroup h3 {
+  line-height: 1.5;
+  text-shadow: 2px 2px 4px rgba(50,50,50,.6);
+  color: #fff; }
+
+/*第三屏 end*/
+/*第四屏 start*/
+.indexCoachTeamAll {
+  max-width: 1300px;
+  margin: auto;
+  background-image: url("../images/index_bubble_bg1.png");
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+.indexCoachTeam {
+  text-align: center; }
+  .indexCoachTeam .indexCoach {
+    text-align: center;
+    display: inline-block; }
+    .indexCoachTeam .indexCoach p {
+      color: #fff;
+      margin: 10px; }
+
+.indexCoach p a {
+  color: #fff;
+  text-decoration: none; }
+
+.indexCoach p a:hover {
+  color: #acdff0; }
+
+.indexCoach .inprocess {
+  width: 100px;
+  padding: 7px;
+  background: #ffb453;
+  border-radius: 10px;
+  display: inline-block; }
+
+.inprogressBar span {
+  color: #fff;
+  vertical-align: text-top; }
+
+.inTalktocoach {
+  position: absolute;
+  right: 10%;
+  margin: 30px;
+  z-index: 3; }
+
+/*第四屏 end*/
+/*第五屏CSS start*/
+.inIndexBgAbout .tableCell{
+  display: table-cell;
+}
+
+
+
+
+.inIndexArea {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto; }
+
+.inIndexAboutPic {
+  margin-top: 50px;
+  width: 50%;
+  position: relative;
+  align-self: flex-start; }
+
+.inIndexAboutTxt {
+  padding-bottom: 46px;
+  background-color: rgba(255, 255, 255, 0.3);
+  align-self: flex-end;
+  width: 50%;
+  position: relative;
+  top: 60px; }
+  .inIndexAboutTxt h2 {
+    margin-top: 70px;
+    color: #fff;
+    padding: 10px; }
+
+.inIndexAboutTxt p {
+  color: #fff;
+  padding: 15px;
+  line-height: 1.4;
+  text-shadow: 2px 2px 4px rgba(50,50,50,.6);
+ }
+
+.inIndexAboutTxt button {
+  text-align: right;
+  float: right;
+  margin: 0 20px 0 0; }
+
+footer {
+  position: absolute;
+  padding: 20px;
+  background: #07215e;
+  bottom: 0;
+  width: 100%; }
+  footer p {
+    color: #fff;
+    text-align: center; }
+
+.indexCoachTeamAll {
+  position: relative; }
+
+.indexCoachTeam img.innimoFish {
+  width: 10%;
+  position: absolute;
+  top: 7px; }
+
+.inIndexAboutPic .inyellowFish {
+  position: absolute;
+  top: -69px;
+  left: -83px; }
+
+.inIndexBgAbout .tableCell {
+  background-image: url("../images/in_about_fish.png");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: right; }
+
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  animation-name: fadeInLeft;
+  animation-delay: 1.5s; }
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0); }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none; } }
+
+/*第五屏CSS end*/
+/*RWD 微調 start*/
+@media screen and (min-width: 100px) and (max-width: 480px) {
+  .inHanMenu {
+    position: fixed;
+    text-align: right;
+    left: 4%;
+    top: 4%;
+    cursor: pointer;
+    z-index: 3;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background-color: #07336e;
+    display: none; }
+  .inhan.hanTop {
+    margin-top: 22px; }
+  .inIndexBgCloth h2, .inIndexVideo h2, .inIndexBgCoachTeam h2, .inIndexBgAbout h2 {
+    margin: 40px auto 40px auto;
+    font-size: 22px; }
+  footer {
+    padding: 20px 4px; }
+  .inCustomWetsuitAll {
+    display: block; }
+  .inCustomProcess h4 {
+    margin: 20px auto;
+    text-align: center;
+    font-size: 22px; }
+  h4 {
+    font-size: 20px; }
+  .inCustomProcess.stepOne p, .stepTwo p, .stepThree p, .inCustomProcess .num p {
+    padding: 9px 15px; }
+  .stepTwo .txt, .stepThree .txt {
+    text-align: right; }
+  .inCustomProcess .num p {
+    font-size: 2.8em;
+    line-height: 69px; }
+  .indexCoachTeam .indexCoach {
+    width: 40%; }
+  .indexCoachTeam img {
+    width: 40%; }
+  .inCustomProcess .num p {
+    font-size: 2em; }
+  .stepOne, .stepTwo, .stepThree {
+    padding: 0px;
+    margin: 0px; }
+  .indexCoachTeam .indexCoach img {
+    width: 58%; }
+  .indexCoachTeam img.innimoFish {
+    display: none; }
+  .stepOne p {
+    padding: 7px; }
+  .inIndexFirstTitle h1 {
+    font-size: 3.5em; }
+  .intextFont {
+    padding: 8px; }
+  .inIndexFirstTitle h2 {
+    font-size: 1.4em; }
+  .inCustomWetsuit img {
+    margin-top: -10px; }
+  video[poster] {
+    margin-top: -50px; }
+  .inCustomProcessBox {
+    padding-bottom: 155.25%; }
+  .intextFont {
+    top: 200px;
+    margin: 0 15px; }
+  #indexSvg {
+    display: none;
+    opacity: 0; }
+  .incontentGroup h3 {
+    font-size: 18px; }
+  .incontentGroup .content {
+    padding: 0; }
+  .indexVideoText h4 {
+    font-size: 18px; }
+  .indexVideoText {
+    top: 47%; }
+  .inoverlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 22px;
+    font-size: 40px; }
+  .content .incontentGroup2 {
+    display: none; }
+  .indexPopularEvent {
+    top: 13%; } }
+
+@media all and (max-width: 767px) {
+  ul.inNav li {
+    margin: 0px; }
+  .inIndexBg .tableCell {
+    margin: auto;
+    display: flex;
+    align-items: inherit; }
+  .inIndexFirstTitle {
+    text-align: center;
+    width: 100%;
+    background-size: contain; }
+  .inIndexArea {
+    padding: 0 15px; }
+  .inIndexArea img, .inIndexAboutPic, .inIndexAboutTxt {
+    width: 100%; }
+  .inIndexAboutPic {
+    margin: 0; }
+  .inIndexAboutTxt {
+    top: 10px; }
+  .inIndexAboutTxt h2 {
+    margin-top: 20px;
+    font-size: 20px;
+    padding: 0px; }
+  p.inaboutLast, .inwetsuitLine, .indexCoach.indexCoach4,
+  .indexCoach.indexCoach5, .indexCoach.indexCoach6, .indexCoach.indexCoach7, .inIndexMenu {
+    display: none; }
+  .indexVideoText p {
+    background: #fff;
+    padding: 6px;
+    border-radius: 10px; }
+  .indexPopularEvent {
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    bottom: none;
+    right: 0;
+    margin: auto;
+    text-align: center;
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0px; }
+  .incontentGroup p {
+    font-size: 15px; }
+  .indexTextPic {
+    width: 50%; }
+  .indexVideoText {
+    order: 1;
+    margin: auto; }
+  .indexButton {
+    order: 3; }
+  .incontentGroup {
+    order: 2; }
+  .indexVideoText .tab {
+    width: 100%;
+    margin: 5px 0; }
+  ul.inNav li a {
+    font-size: 18px; }
+  ul.inNav li a:hover {
+    color: #fff; }
+  .inIndexAboutTxt {
+    padding-bottom: 0px; }
+  .inCustomWetsuit, .indexLogo {
+    display: none; }
+  .inCustomProcess {
+    width: 80%;
+    text-align: center;
+    margin: auto; }
+  .indexButton {
+    padding: 10px; }
+  .inIndexAboutPic .inyellowFish {
+    display: none; }
+  .indexCoachTeam img.innimoFish {
+    width: 16%; }
+  .inHanMenu {
+    display: block; }
+  .indexVideoText img {
+    width: 50%; }
+  .indexCoachTeam img {
+    width: 53%; }
+  .indexCoachTeam .indexCoach {
+    width: 50%; }
+  .indexVideoText h4 {
+    padding: 5px; }
+  .inIndexBgAbout h2 {
+    text-shadow: 2px 2px 4px rgba(50,50,50,.6);
+    line-height: 1.5;
+    color: #fff;
+    text-align: center;
+    margin: 40px auto 20px auto;
+    padding: 10px; }
+  .indexWetsuitBox {
+    width: 80%; }
+  .intextFont {
+    top: 200px;
+    margin: 0 15px; }
+  .indexWetsuitCircle, .indexWetsuitLine, .indexWetsuitText {
+    display: none; }
+  .inCustomProcessBox {
+    padding-bottom: 150%; }
+  #indexSvg {
+    width: 500px; }
+  .inCustomWetsuitAll {
+    display: block; } }
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .indexPopularEvent {
+    width: 94%; }
+  .indexVideoText img {
+    width: 80%; }
+  .indexPopularEvent {
+    bottom: 44px; }
+  .inIndexAboutPic {
+    width: 100%; }
+  .inIndexAboutTxt {
+    top: 0px; }
+  .inyellowFish, .indexCoachTeam .indexCoach.indexCoach5,
+  .indexCoachTeam .indexCoach.indexCoach6, .indexCoachTeam .indexCoach.indexCoach7 {
+    display: none; }
+  .indexLogo img {
+    width: 50%; }
+  .indexWetsuitBox {
+    width: 50%; }
+  .inwetsuitLine {
+    width: 500px;
+    left: -30px;
+    top: 75px;
+    display: none; }
+  .inCustomWetsuitBox, .indexLogo {
+    display: none; }
+  .inCustomProcess.section05 {
+    margin-left: 20%; }
+  .inCustomProcess {
+    width: 60%;
+    text-align: center; }
+  .inIndexAboutPic {
+    align-self: center; }
+  .inIndexArea img {
+    width: 90%;
+    margin: 0 5%; }
+  .inIndexAboutTxt {
+    width: 90%;
+    margin: 0 5%;
+    align-self: center; }
+  .indexVideoText {
+    position: absolute;
+    top: 40%;
+    right: 10%;
+    left: 10%;
+    margin: auto;
+    z-index: 2; }
+  .indexButton {
+    padding-top: 17px; }
+  .inCustomWetsuitAll {
+    display: block; }
+  .inIndexVideo h2, .inIndexBgCloth h2, .inIndexBgCoachTeam h2, .indexAboutTitle h2 {
+    margin: 25px auto 25px auto;
+    line-height: 1.5; }
+  .inIndexMenu {
+    top: 2.5em; } }
+
+@media all and (min-width: 992px) {
+  .inTalktocoach {
+    position: absolute;
+    left: 2%;
+    margin: 30px;
+    z-index: 3; }
+  .indexCoachTeam .indexCoach {
+    width: 18.5%;
+    margin: 30px 0; }
+  .indexCoachTeam img {
+    width: 85%; }
+  .inIndexAboutTxt {
+    width: 48%; }
+  .inIndexAboutPic {
+    width: 45%; }
+  p.inaboutLast {
+    display: block; }
+  .inwetsuitLine {
+    width: 450px;
+    left: -30px;
+    top: 14px;
+    display: none; }
+  .inIndexAboutPic .inyellowFish {
+    display: none; }
+  .indexPopularEvent {
+    width: 80%; }
+  .inIndexMenu {
+    top: 1em; }
+  .inCustomProcess h4 {
+    margin: 25px auto; }
+  .stepOne, .stepTwo, .stepThree {
+    display: flex;
+    padding: 6px 0 12px 0; }
+  .indexButton {
+    margin: auto;
+    padding-top: 20px; }
+  .indexLogo img {
+    width: 50%; }
+  .indexVideoText img {
+    width: 100%; }
+  .inCustomWetsuit .patternOneSmall {
+    top: calc(13%); }
+  .inIndexMenu img {
+    margin: 5px 20px 40px 20px; }
+  .indexWetsuitBox {
+    width: 37%;
+    top: 50px; }
+  .indexVideoText {
+    top: 40%; }
+  .indexWetsuitCircle, .indexWetsuitLine, .indexWetsuitText {
+    display: none; }
+  .indexTextPic {
+    width: 20%; }
+  .inIndexMenu {
+    top: 60px; }
+  .inIndexVideo h2, .inIndexBgCloth h2, .inIndexBgCoachTeam h2, .indexAboutTitle h2 {
+    margin: 3.5% auto 3.5% auto; }
+  .incontentGroup .content {
+    padding: 5px; }
+  .inCustomWetsuitBox img {
+    width: 85%; }
+  .inCustomWetsuit .patternOneSmall {
+    left: -67px; } }
+
+@media all and (min-width: 1200px) {
+  .indexWetsuitCircle, .indexWetsuitLine, .indexWetsuitText {
+    display: block; }
+  .indexCoachTeam img {
+    width: 90%; }
+  .indexCoachTeam .indexCoach {
+    width: 17%; }
+  .indexCoachTeamAll {
+    margin: 4% auto; }
+  .inIndexAboutTxt, .inIndexAboutPic {
+    width: 50%; }
+  .stepOne, .stepTwo, .stepThree {
+    display: flex;
+    margin: 20px;
+    padding: 10px 0 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5); }
+  .inIndexAboutPic .inyellowFish {
+    display: block; }
+  .indexPopularEvent {
+    width: 50%; }
+  .inwetsuitLine {
+    width: 30%;
+    display: none; }
+  .indexLogo img {
+    width: 70%; }
+  .inCustomProcess, .inCustomWetsuit {
+    width: 33.3%; }
+  .indexVideoText img {
+    width: 100%; }
+  .inCustomProcess.section05 {
+    margin-left: 0%;
+    margin-right: 0%; }
+  .inTalktocoach {
+    position: absolute;
+    left: 8%;
+    margin: 0px;
+    z-index: 3; }
+  .indexWetsuitBox {
+    width: 25%;
+    top: 60px; }
+  .indexVideoText {
+    max-width: 1200px;
+    margin: auto;
+    top: 45%; }
+  .inIndexMenu {
+    top: 10%; }
+  .indexTextPic {
+    width: 25%; }
+  .inIndexVideo h2, .inIndexBgCloth h2, .inIndexBgCoachTeam h2, .indexAboutTitle h2 {
+    margin: 2.6% auto 2.6% auto;
+    line-height: 1.5;
+    text-shadow: 2px 2px 4px rgba(50,50,50,.6);
+   }
+  .inCustomWetsuitBox img {
+    width: 93%; }
+  .inCustomWetsuit .patternOneSmall {
+    left: -50px; } }
+
+@media screen and (min-width: 1201px) and (max-width: 1500px) {
+  .indexLogo img {
+    width: 64%; }
+  .stepOne, .stepTwo, .stepThree {
+    padding: 0; }
+  .inCustomProcessBox {
+    padding-bottom: 117%; }
+  .inCustomWetsuitBox img {
+    width: 91%; }
+  .inCustomWetsuit .patternOneSmall {
+    left: -50px; }
+  .inwetsuitLine {
+    width: 30%;
+    top: 300px; }
+  .inIndexVideo h2, .inIndexBgCloth h2, .inIndexBgCoachTeam h2, .indexAboutTitle h2 {
+    margin: 2% auto 2% auto; } }

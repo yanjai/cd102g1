@@ -1,0 +1,149 @@
+body {
+  position: relative; }
+
+#fish {
+  width: 5%;
+  position: absolute;
+  left: 80%;
+  animation: floatBalloon 25s;
+  animation-iteration-count: infinite;
+  z-index: 5; }
+  #fish img {
+    width: 100%; }
+
+#fish2 {
+  width: 5%;
+  position: absolute;
+  left: 20%;
+  animation: floatBalloon 20s;
+  animation-iteration-count: infinite;
+  z-index: 5; }
+  #fish2 img {
+    width: 100%; }
+
+#fish3 {
+  width: 3%;
+  position: absolute;
+  left: 10%;
+  animation: floatBalloon 30s;
+  animation-iteration-count: infinite;
+  z-index: 5; }
+  #fish3 img {
+    width: 100%; }
+
+#fish4 {
+  width: 20%;
+  position: absolute;
+  right: 10%;
+  top: 0%;
+  z-index: 5;
+  transition: 5s; }
+  #fish4 img {
+    width: 100%; }
+
+#fish5 {
+  width: 20%;
+  position: absolute;
+  right: 10%;
+  top: 15%;
+  z-index: 5;
+  transition: 5s;
+  display: none; }
+  #fish5 img {
+    width: 100%; }
+
+#fish6 {
+  width: 10%;
+  position: absolute;
+  right: 15%;
+  top: 30%;
+  z-index: 5;
+  transition: 5s;
+  display: none; }
+  #fish6 img {
+    width: 100%; }
+
+#fish7 {
+  width: 10%;
+  position: absolute;
+  right: 10%;
+  top: 50%;
+  z-index: 5;
+  transition: 5s;
+  display: none; }
+  #fish7 img {
+    width: 100%; }
+
+#diver1 {
+  width: 20%;
+  position: absolute;
+  left: 10%;
+  top: 60%;
+  z-index: 5;
+  transition: 5s;
+  display: none; }
+  #diver1 img {
+    width: 100%; }
+
+@keyframes floatBalloon {
+  0% {
+    top: 80%;
+    opacity: 1;
+    transform: translate(0, 0) scale(1.4); }
+  10% {
+    top: 72%;
+    opacity: 1;
+    transform: translate(-50%, 0) rotate(-15deg) scale(1.4); }
+  20% {
+    top: 64%;
+    opacity: 1;
+    transform: translate(10%, 0) rotate(0deg) scale(1.4); }
+  30% {
+    top: 56%;
+    opacity: 1;
+    transform: translate(-70%, 0) rotate(-20deg) scale(1.3); }
+  40% {
+    top: 48%;
+    opacity: 1;
+    transform: translate(0, 0) rotate(-10deg) scale(1.3); }
+  50% {
+    top: 40%;
+    opacity: 1;
+    transform: translate(-80%, 0) rotate(-8deg) scale(1.3); }
+  60% {
+    top: 32%;
+    opacity: 1;
+    transform: translate(20%, 0) rotate(-15deg) scale(1.2); }
+  70% {
+    top: 24%;
+    opacity: 1;
+    transform: translate(-50%, 0) rotate(-10deg) scale(1.2); }
+  80% {
+    top: 16%;
+    opacity: 1;
+    transform: translate(0, 0) rotate(-8deg) scale(1.2); }
+  90% {
+    top: 8%;
+    opacity: 1;
+    transform: translate(-70%, 0) rotate(-10deg) scale(1.1); }
+  100% {
+    top: 0%;
+    opacity: 0;
+    transform: translate(0, 0) rotate(0deg) scale(1); } }
+
+@media all and (max-width: 767px) {
+  #fish {
+    width: 5%; }
+  #fish2 {
+    width: 5%; }
+  #fish3 {
+    width: 5%; }
+  #fish4 {
+    display: none;
+    width: 15%; }
+  #fish5 {
+    width: 15%; }
+  #fish6 {
+    width: 15%; }
+  #diver1 {
+    width: 15%; } }

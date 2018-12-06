@@ -1,0 +1,185 @@
+$card-width: 350px;
+
+$input-height: 45px;
+$btn-height: 35px;
+$spinner-size: 35px;
+
+$btn-anim: 0.35s;
+$spinner-anim: 1.2s;
+
+$color-text: #fff;
+$bg-body: #2c3e50;
+
+::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+}
+
+body {
+  height: 100vh;
+  background: $bg-body;
+  
+  position: relative;
+}
+
+.dBlock {
+  display: block;
+  width: 100%;
+}
+
+.btn {
+  margin: 0;
+  padding: 0;
+  
+  &:active, &:focus, &:active:hover:focus, &:active:focus {
+    outline: 0;
+  }
+}
+
+.btnPrimary {
+  height: $btn-height;
+  line-height: $btn-height;
+
+  font-size: 12px;
+  text-transform: uppercase;
+  
+  transition: all $btn-anim, opacity $btn-anim $btn-anim, background 0s;
+  
+  background: transparent;
+  border: 1px solid $color-text;
+  color: $color-text;
+  
+  &:hover {
+    background: $color-text;
+    color: rgb(52, 152, 219);
+    cursor: pointer;
+  }
+  
+  .form-submitted & {
+    width: $spinner-size;
+    background: $color-text;
+    border: 0;
+    color: transparent;
+    font-size: 0;
+    opacity: 0;
+  }
+  
+  .form-done & {
+    transition: all $btn-anim, background 0s;
+    width: 100%;
+    background: transparent;
+    border: 1px solid $color-text;
+    color: $color-text;
+    font-size: 12px;
+    opacity: 1;
+  }
+}
+
+.cardForm {
+  width: $card-width;
+  margin: 0 auto;
+  padding: 60px 30px 45px;
+  
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  background-image: linear-gradient(0deg, rgb(26, 188, 156) 25%, rgb(52, 152, 219) 100%);
+  color: $color-text;
+  
+  border-radius: 3px;
+  box-shadow: 0 2px 0 2px rgba(0, 0, 0, 0.075);
+  
+  text-align: center;
+  
+  .btn {
+    margin: 0 auto;
+  }
+}
+  .formTitle {
+    margin: 0 0 30px;
+
+    text-transform: uppercase;
+    font: 20px/24px 'Helvetica', Arial;
+    font-weight: bold;
+  }
+  .formRow {
+    display: block;
+    margin: 0 0 5px;
+    
+    position: relative;
+    
+    clear: both;
+    
+    &.last {
+      margin: 40px 0 0;
+    }
+  }
+  .cardInput {
+    height: $input-height;
+    line-height: $input-height;
+    padding: 10px;
+    
+    transition: all .2s;
+    
+    background: transparent;
+    color: rgba(255, 255, 255, 0.7);
+    border: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    outline: 0;
+    
+    text-align: center;
+    
+    &:focus {
+      color: #fff;
+      border-bottom-color: $color-text;
+    }
+  }
+
+.spinner {
+  visibility: hidden;
+  opacity: 0;
+  
+  width: $spinner-size;
+  height: $spinner-size;
+  background-color: #fff;
+  
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -($spinner-size / 2);
+  
+  transition: all .1s $btn-anim;
+  
+  .form-submitted & {
+    transition: none;
+    visibility: visible;
+    opacity: 1;
+    animation: sk-rotateplane $spinner-anim infinite ease-in-out;
+    animation-delay: $btn-anim;
+  }
+  
+  .form-done & {
+    transition: all .1s;
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+@keyframes sk-rotateplane {
+  0% { 
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+  } 50% { 
+    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+  } 100% { 
+    transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+  }
+}

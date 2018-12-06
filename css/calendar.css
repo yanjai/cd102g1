@@ -1,0 +1,334 @@
+#chCalendar {
+  width: 0;
+  height: 100vh;
+  margin: auto;
+  background-image: url("../images/ch_bg3.jpg");
+  background-color: transparent;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  right: -150px;
+  z-index: 20;
+  transform: 1s;
+  opacity: .9; }
+  #chCalendar #chYearMonth {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: relative;
+    padding: 10px 30px;
+    box-sizing: border-box; }
+    #chCalendar #chYearMonth #chMonth {
+      font-size: 4rem;
+      line-height: inherit;
+      color: #fff;
+      font-family: 'minion-pro', 'Minion Pro';
+      letter-spacing: 0.01em;
+      text-align: left; }
+    #chCalendar #chYearMonth #chDiver {
+      width: 10%;
+      height: 2px;
+      margin: auto;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      position: absolute;
+      background-color: rgba(255, 255, 255, 0.726); }
+    #chCalendar #chYearMonth #chYear {
+      font-size: 4rem;
+      line-height: inherit;
+      color: rgba(255, 255, 255, 0.726);
+      font-family: 'minion-pro', 'Minion Pro';
+      letter-spacing: 0.01em;
+      text-align: right; }
+  #chCalendar #chCalBody {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative; }
+    #chCalendar #chCalBody #chLeft {
+      position: absolute;
+      left: 0;
+      top: -6vh;
+      color: #fff;
+      font-size: 24px;
+      cursor: pointer;
+      opacity: .3;
+      animation: myleft 2s;
+      animation-iteration-count: infinite; }
+    #chCalendar #chCalBody #chRight {
+      position: absolute;
+      right: 0;
+      top: -6vh;
+      color: #fff;
+      font-size: 24px;
+      cursor: pointer;
+      opacity: .3;
+      animation: myright 2s;
+      animation-iteration-count: infinite; }
+    #chCalendar #chCalBody #chWeekList ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      font-family: 'minion-pro', 'Minion Pro';
+      color: #9DB6C5;
+      font-weight: bold;
+      font-size: 24px;
+      text-align: center;
+      margin-bottom: 30px; }
+      #chCalendar #chCalBody #chWeekList ul li {
+        width: 14.286%; }
+    #chCalendar #chCalBody .chDayList #chDays {
+      display: flex;
+      flex-wrap: wrap;
+      font-family: 'minion-pro', 'Minion Pro';
+      font-weight: bold;
+      font-size: 20px;
+      text-align: center; }
+      #chCalendar #chCalBody .chDayList #chDays li {
+        padding: 20px 0;
+        width: 14.286%; }
+      #chCalendar #chCalBody .chDayList #chDays .chLightgrey {
+        color: #8A8486;
+        cursor: default; }
+      #chCalendar #chCalBody .chDayList #chDays .chWhite.active {
+        color: #000; }
+        #chCalendar #chCalBody .chDayList #chDays .chOrange{
+          color: rgb(206,153,53);
+          cursor: default;
+        }
+        #chCalendar #chCalBody .chDayList #chDays .chWhite.active:before {
+          content: '';
+          display: block;
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          background-color: rgba(255, 150, 30, 0.973);
+          position: absolute;
+          margin: auto;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          z-index: -1; }
+      #chCalendar #chCalBody .chDayList #chDays .chWhite {
+        color: #fff;
+        position: relative;
+        z-index: 2;
+        transition: .5s;
+        cursor: pointer; }
+        #chCalendar #chCalBody .chDayList #chDays .chWhite:hover {
+          color: #000; }
+        #chCalendar #chCalBody .chDayList #chDays .chWhite:hover:after {
+          content: '';
+          display: block;
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          background-color: #FFB81E;
+          position: absolute;
+          margin: auto;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          z-index: -1;
+          animation-duration: 0.75s;
+          animation-name: bounceIn; }
+  #chCalendar #chSelect {
+    width: 100%;
+    height: 120px;
+    box-sizing: border-box;
+    padding: 10px 20px; }
+    #chCalendar #chSelect #chCoa {
+      width: 100%;
+      margin: 10px 0; }
+      #chCalendar #chSelect #chCoa #chOption {
+        width: 50%;
+        height: 40px;
+        font-size: 18px;
+        border: none;
+        cursor: pointer;
+        color: #fff;
+        background-color: transparent; }
+        #chCalendar #chSelect #chCoa #chOption option {
+          font-family: Microsoft JhengHei;
+          background-color: #1A59A4; }
+    #chCalendar #chSelect #chAct {
+      width: 100%; }
+      #chCalendar #chSelect #chAct #chActOption {
+        width: 50%;
+        height: 40px;
+        font-size: 18px;
+        border: none;
+        cursor: pointer;
+        color: #fff;
+        background-color: transparent; }
+        #chCalendar #chSelect #chAct #chActOption option {
+          font-family: Microsoft JhengHei;
+          background-color: #1A59A4; }
+  #chCalendar #chBtnWrap {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    box-sizing: border-box;
+    padding: 0 10px;
+    position: absolute;
+    bottom: 30px;
+    margin: auto;
+    right: 30px; }
+    #chCalendar #chBtnWrap #chSubmit {
+      weight: 20%;
+      height: 30px;
+      padding: 0 20px;
+      background-color: #A07018;
+      border: 0 none;
+      color: #002553;
+      cursor: pointer; }
+      #chCalendar #chBtnWrap #chSubmit:hover {
+        background-color: #FFA33A; }
+  #chCalendar #chClose {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    opacity: 0;
+    cursor: pointer; }
+    #chCalendar #chClose:after {
+      content: '';
+      width: 100%;
+      height: 2px;
+      display: block;
+      background-color: #fff;
+      transform: rotate(135deg);
+      position: absolute;
+      margin: auto;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      border-radius: 10px;
+      transition: .8s; }
+    #chCalendar #chClose:hover:after {
+      transform: rotate(45deg); }
+    #chCalendar #chClose:before {
+      content: '';
+      width: 100%;
+      height: 2px;
+      display: block;
+      background-color: #fff;
+      transform: rotate(45deg);
+      position: absolute;
+      margin: auto;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      border-radius: 10px;
+      transition: .8s; }
+    #chCalendar #chClose:hover:before {
+      transform: rotate(135deg); }
+  #chCalendar #index-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100; }
+
+#chCalendar.active {
+  width: 30%;
+  right: 0; }
+
+@keyframes bounceIn {
+  from,
+  20%,
+  40%,
+  60%,
+  80%,
+  to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+  0% {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3); }
+  20% {
+    transform: scale3d(1.1, 1.1, 1.1); }
+  40% {
+    transform: scale3d(0.9, 0.9, 0.9); }
+  60% {
+    opacity: 1;
+    transform: scale3d(1.03, 1.03, 1.03); }
+  80% {
+    transform: scale3d(0.97, 0.97, 0.97); }
+  to {
+    opacity: 1;
+    transform: scale3d(1, 1, 1); } }
+
+@keyframes myleft {
+  from {
+    left: 30%; }
+  to {
+    left: 32%; } }
+
+@keyframes myright {
+  from {
+    right: 30%; }
+  to {
+    right: 32%; } }
+
+@keyframes myleft2 {
+  from {
+    left: 8%; }
+  to {
+    left: 10%; } }
+
+@keyframes myright2 {
+  from {
+    right: 8%; }
+  to {
+    right: 10%; } }
+
+@media all and (max-width: 767px) {
+  #chCalendar #chCalBody #chLeft {
+    position: absolute;
+    top: -4%;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    opacity: .3;
+    animation: myleft2 2s;
+    animation-iteration-count: infinite; }
+  #chCalendar #chCalBody #chRight {
+    position: absolute;
+    top: -4%;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    opacity: .3;
+    animation: myright2 2s;
+    animation-iteration-count: infinite; } 
+    #chCalendar #chCalBody .chDayList #chDays .chWhite:hover {}
+      #chCalendar #chCalBody .chDayList #chDays .chWhite:hover:after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 0;
+        border-radius: 50%;
+        background-color: #FFB81E;
+        position: relative;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: -1;
+        animation-duration: 0.75s;
+        animation-name: bounceIn; }
+  
+  
+  }

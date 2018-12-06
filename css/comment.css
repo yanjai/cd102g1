@@ -1,0 +1,97 @@
+.content .chMoreBtnFont{
+  display: block;
+  margin:0 auto;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 30px;
+
+}
+
+.commentArea .chLbAllcommentBox {
+    max-width: 1200px;
+    height: 300px;
+    /*margin: 50px auto 0;*/
+    box-sizing: border-box;
+    margin:auto;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    padding: 10px;
+    overflow: hidden; }.commentArea .chLbAllcommentBox ul {
+      width: 100%;
+      height: auto; }
+.commentArea .chLbAllcommentBox ul li {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+        margin-bottom: 10px; }
+  .commentArea .chLbAllcommentBox ul li:after {
+          content: '';
+          width: 100%;
+          clear: both;
+          display: block; }
+  .commentArea .chLbAllcommentBox ul li .chReport {
+          width: 20%;
+          text-align: right;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: flex-end;
+          padding: 10px;
+          box-sizing: border-box; }
+    .commentArea .chLbAllcommentBox ul li .chReport p {
+            font-weight: bold; }
+    .commentArea .chLbAllcommentBox ul li .chReport p:nth-child(1) {
+            cursor: pointer;
+            width: 36px; }
+    .commentArea .chLbAllcommentBox ul li .chReport p:nth-child(1):hover {
+            color: #f00; }
+  .commentArea .chLbAllcommentBox ul li .chLbPercommentBox {
+          width: 65%;
+          margin: 10px 0 0;
+          padding: 10px;
+          box-sizing: border-box; }
+    .commentArea .chLbAllcommentBox ul li .chLbPercommentBox .chLbPerName {
+            display: inline-block;
+            margin-right: 20px; }
+      .commentArea .chLbAllcommentBox ul li .chLbPercommentBox .chLbPerName p {
+              font-weight: bold;
+              padding: 5px 0; }
+    .commentArea .chLbAllcommentBox ul li .chLbPercommentBox p {
+            font-weight: bold;
+            display: inline-block; }
+    .commentArea .chLbAllcommentBox ul li .chLbPercommentBox .chLbPerRating {
+            display: inline-block;
+            width: 150px;
+            height: 10px;
+            border-radius: 10px;
+            background-color: #fff;
+            margin: 0 5px 0 10px; }
+      .commentArea .chLbAllcommentBox ul li .chLbPercommentBox .chLbPerRating .chLbPerRatingBar {
+              width: 0;
+              height: 10px;
+              background-color: #ffb242;
+              border-radius: 10px; }
+    .commentArea .chLbAllcommentBox ul li .chLbPercommentBox .chLbPerContent {
+            padding: 10px 0; }
+      .commentArea .chLbAllcommentBox ul li .chLbPercommentBox .chLbPerContent p {
+              font-weight: normal;
+              line-height: 18px; }
+    .commentArea .chLbAllcommentBox ul li .chLbPercommentBox .chLbPerScore {
+            display: inline-block; }
+  .commentArea .chLbAllcommentBox ul li .chLbImgName {
+          width: 15%;
+          padding: 10px;
+          box-sizing: border-box; }
+    .commentArea .chLbAllcommentBox ul li .chLbImgName .chLbPerImg {
+            width: 80%;
+            border-radius: 50%; }
+      .commentArea .chLbAllcommentBox ul li .chLbImgName .chLbPerImg img {
+              width: 80%;
+              border-radius: 50%; }
+.commentArea .chLbAllcommentBox ul li:nth-child(odd) {
+        background-color: #68badd;
+        color: #141559; }
+.commentArea .chLbAllcommentBox ul li:nth-child(even) {
+        background-color: #1e3895;
+        color: #fff; }

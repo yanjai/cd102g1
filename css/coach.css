@@ -1,0 +1,506 @@
+body {
+  overflow-x: hidden; }
+
+.chRwdFull {
+  display: none; }
+
+.chFull {
+  width: 100%;
+  position: relative; }
+
+.navbarBottom {
+  padding: 2%; }
+
+.chWrap {
+  width: 100%;
+  height: 900px;
+  background-color: #ddd; }
+
+.chWrapContent {
+  max-width: 1200px;
+  margin: auto; }
+
+#chWrap1 {
+  background: #fff url("../images/ch_bg1.jpg") center center fixed no-repeat;
+  background-size: cover;
+  background-repeat: no-repeat; }
+  #chWrap1 .navbarBottom {
+    padding-bottom: 70px; }
+  #chWrap1 .chTitle {
+    padding: 70px 0;
+    width: 120px;
+    margin: 0 auto;
+    text-align: center;
+    font-family: arial;
+    position: relative; }
+    #chWrap1 .chTitle h3 {
+      width: 120px;
+      margin: auto;
+      color: #1a1572;
+      position: relative;
+      font-family: 'Microsoft JhengHei'; }
+      #chWrap1 .chTitle h3:after {
+        content: '';
+        margin: auto;
+        display: block;
+        width: 60%;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -10px;
+        border: 1px solid #001c58; }
+    #chWrap1 .chTitle .individual-bubble {
+      position: absolute;
+      border-radius: 100%;
+      bottom: 80px;
+      background-color: #4092D7;
+      z-index: 1;
+      left: 0; }
+
+#chWrap3 {
+  background: #fff url("../images/ch_bg2.jpg") center center fixed no-repeat;
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+#chWrap5 {
+  background: #fff url("../images/ch_bg3.jpg") center center fixed no-repeat;
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+#chWrap7 {
+  background: #fff url("../images/ch_bg4.jpg") center center fixed no-repeat;
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+#chWrap1 .chWrapContent, .chOdd .chWrapContent, .chEven .chWrapContent {
+  display: flex;
+  flex-wrap: wrap; }
+  #chWrap1 .chWrapContent .chImg, .chOdd .chWrapContent .chImg, .chEven .chWrapContent .chImg {
+    width: 25%;
+    padding: 10px;
+    box-sizing: border-box; }
+    #chWrap1 .chWrapContent .chImg img, .chOdd .chWrapContent .chImg img, .chEven .chWrapContent .chImg img {
+      width: 100%;
+      vertical-align: middle; }
+    #chWrap1 .chWrapContent .chImg .chBtnBox, .chOdd .chWrapContent .chImg .chBtnBox, .chEven .chWrapContent .chImg .chBtnBox {
+      display: none; }
+  #chWrap1 .chWrapContent .chImg.active, .chOdd .chWrapContent .chImg.active, .chEven .chWrapContent .chImg.active {
+    animation: fadeInLeft 1s; }
+  #chWrap1 .chWrapContent .chProfile, .chOdd .chWrapContent .chProfile, .chEven .chWrapContent .chProfile {
+    box-sizing: border-box;
+    padding: 15px 15px;
+    width: 25%; }
+    #chWrap1 .chWrapContent .chProfile .chDetail, .chOdd .chWrapContent .chProfile .chDetail, .chEven .chWrapContent .chProfile .chDetail {
+      padding: 30px 0;
+      line-height: 1.5;
+      color: #333;
+      word-break: break-all;
+      opacity: 0.8; }
+      #chWrap1 .chWrapContent .chProfile .chDetail P, .chOdd .chWrapContent .chProfile .chDetail P, .chEven .chWrapContent .chProfile .chDetail p{
+        line-height: 1.5;
+      }
+    #chWrap1 .chWrapContent .chProfile .chQual, .chOdd .chWrapContent .chProfile .chQual, .chEven .chWrapContent .chProfile .chQual {
+      padding: 15px 0; }
+      #chWrap1 .chWrapContent .chProfile .chQual h4, .chOdd .chWrapContent .chProfile .chQual h4, .chEven .chWrapContent .chProfile .chQual h4 {
+        padding: 10px 0; }
+      #chWrap1 .chWrapContent .chProfile .chQual ul li, .chOdd .chWrapContent .chProfile .chQual ul li, .chEven .chWrapContent .chProfile .chQual ul li {
+        padding: 5px 0;
+        color: #333;
+        opacity: 0.8; }
+    #chWrap1 .chWrapContent .chProfile .chBtnBox, .chOdd .chWrapContent .chProfile .chBtnBox, .chEven .chWrapContent .chProfile .chBtnBox {
+      padding-top: 10%;
+      display: flex;
+      flex-wrap: wrap; }
+      #chWrap1 .chWrapContent .chProfile .chBtnBox button:nth-child(1), .chOdd .chWrapContent .chProfile .chBtnBox button:nth-child(1), .chEven .chWrapContent .chProfile .chBtnBox button:nth-child(1) {
+        background-color: #fff;
+        color: #07336e;
+        margin-right: 20px; }
+        #chWrap1 .chWrapContent .chProfile .chBtnBox button:nth-child(1):hover, .chOdd .chWrapContent .chProfile .chBtnBox button:nth-child(1):hover, .chEven .chWrapContent .chProfile .chBtnBox button:nth-child(1):hover {
+          background-color: #1d2088;
+          color: #fff; }
+      #chWrap1 .chWrapContent .chProfile .chBtnBox button:nth-child(2), .chOdd .chWrapContent .chProfile .chBtnBox button:nth-child(2), .chEven .chWrapContent .chProfile .chBtnBox button:nth-child(2) {
+        background-color: #1d2088; }
+        #chWrap1 .chWrapContent .chProfile .chBtnBox button:nth-child(2):hover, .chOdd .chWrapContent .chProfile .chBtnBox button:nth-child(2):hover, .chEven .chWrapContent .chProfile .chBtnBox button:nth-child(2):hover {
+          background-color: #fff; }
+          #chWrap1 .chWrapContent .chProfile .chBtnBox button:nth-child(2):hover a, .chOdd .chWrapContent .chProfile .chBtnBox button:nth-child(2):hover a, .chEven .chWrapContent .chProfile .chBtnBox button:nth-child(2):hover a {
+            color: #1D2088; }
+  #chWrap1 .chWrapContent .chProfile.active, .chOdd .chWrapContent .chProfile.active, .chEven .chWrapContent .chProfile.active {
+    animation: fadeInDown 1s; }
+  #chWrap1 .chWrapContent .chBox, .chOdd .chWrapContent .chBox, .chEven .chWrapContent .chBox {
+    width: 50%;
+    box-sizing: border-box;
+    padding: 15px 15px; }
+    #chWrap1 .chWrapContent .chBox .chAct ul, .chOdd .chWrapContent .chBox .chAct ul, .chEven .chWrapContent .chBox .chAct ul {
+      padding: 15px 0;
+      display: flex;
+      flex-wrap: wrap;
+      box-sizing: border-box;
+      position: relative; }
+      #chWrap1 .chWrapContent .chBox .chAct ul li, .chOdd .chWrapContent .chBox .chAct ul li, .chEven .chWrapContent .chBox .chAct ul li {
+        padding-right: 30px;
+       }
+       .fa-caret-right.active{
+        animation: slideInRight 1s;
+        animation-iteration-count: infinite;
+       }
+       #chWrap1 .chWrapContent .chBox .chAct ul li:after, .chOdd .chWrapContent .chBox .chAct ul li, .chEven .chWrapContent .chBox .chAct ul li{
+
+       }
+        #chWrap1 .chWrapContent .chBox .chAct ul li a, .chOdd .chWrapContent .chBox .chAct ul li a, .chEven .chWrapContent .chBox .chAct ul li a {
+          text-decoration: none;
+          color: #052832;
+          transition: .5s;
+          opacity: 0.8;
+         }
+          #chWrap1 .chWrapContent .chBox .chAct ul li a:visited, .chOdd .chWrapContent .chBox .chAct ul li a:visited, .chEven .chWrapContent .chBox .chAct ul li a:visited {
+            color: #052832; }
+          #chWrap1 .chWrapContent .chBox .chAct ul li a img, .chOdd .chWrapContent .chBox .chAct ul li a img, .chEven .chWrapContent .chBox .chAct ul li a img {
+            width: 100%; }
+      #chWrap1 .chWrapContent .chBox .chAct ul .chBorder, .chOdd .chWrapContent .chBox .chAct ul .chBorder, .chEven .chWrapContent .chBox .chAct ul .chBorder {
+        display: block;
+        position: absolute;
+        bottom: 10px;
+        width: 0;
+        height: 3px;
+        background-color: #ffb242;
+        transition: .5s; }
+    #chWrap1 .chWrapContent .chBox .chComment, .chOdd .chWrapContent .chBox .chComment, .chEven .chWrapContent .chBox .chComment {
+      padding-top: 20px; }
+      #chWrap1 .chWrapContent .chBox .chComment h4, .chOdd .chWrapContent .chBox .chComment h4, .chEven .chWrapContent .chBox .chComment h4 {
+        padding-bottom: 15px; }
+      #chWrap1 .chWrapContent .chBox .chComment .chCommentBox, .chOdd .chWrapContent .chBox .chComment .chCommentBox, .chEven .chWrapContent .chBox .chComment .chCommentBox {
+        display: flex;
+        flex-wrap: wrap;
+        padding-bottom: 10px;
+        position: relative; }
+        #chWrap1 .chWrapContent .chBox .chComment .chCommentBox .chRating, .chOdd .chWrapContent .chBox .chComment .chCommentBox .chRating, .chEven .chWrapContent .chBox .chComment .chCommentBox .chRating {
+          width: 150px;
+          height: 10px;
+          border-radius: 10px;
+          background-color: #fff;
+          margin-right: 20px; }
+          #chWrap1 .chWrapContent .chBox .chComment .chCommentBox .chRating .chRatingBar, .chOdd .chWrapContent .chBox .chComment .chCommentBox .chRating .chRatingBar, .chEven .chWrapContent .chBox .chComment .chCommentBox .chRating .chRatingBar {
+            width: 0;
+            transition: 2s;
+            height: 10px;
+            background-color: #ffb242;
+            border-radius: 10px; }
+        #chWrap1 .chWrapContent .chBox .chComment .chCommentBox .chtotalScore, .chOdd .chWrapContent .chBox .chComment .chCommentBox .chtotalScore, .chEven .chWrapContent .chBox .chComment .chCommentBox .chtotalScore {
+          color: #fff;
+          height: 20px; }
+        #chWrap1 .chWrapContent .chBox .chComment .chCommentBox button, .chOdd .chWrapContent .chBox .chComment .chCommentBox button, .chEven .chWrapContent .chBox .chComment .chCommentBox button {
+          position: absolute;
+          right: 0;
+          bottom: 10px; }
+      #chWrap1 .chWrapContent .chBox .chComment .chCommentWrap, .chOdd .chWrapContent .chBox .chComment .chCommentWrap, .chEven .chWrapContent .chBox .chComment .chCommentWrap {
+        width: 100%;
+        box-sizing: border-box;
+        border: 0.5px solid #37474f; }
+        #chWrap1 .chWrapContent .chBox .chComment .chCommentWrap ul, .chOdd .chWrapContent .chBox .chComment .chCommentWrap ul, .chEven .chWrapContent .chBox .chComment .chCommentWrap ul {
+          padding: 10px 10px 5px 10px; }
+          #chWrap1 .chWrapContent .chBox .chComment .chCommentWrap ul li, .chOdd .chWrapContent .chBox .chComment .chCommentWrap ul li, .chEven .chWrapContent .chBox .chComment .chCommentWrap ul li {
+            display: block;
+            width: 100%;
+            height: 120px;
+            box-sizing: border-box;
+            padding: 10px;
+            margin-bottom: 5px;
+            position: relative;
+            word-break: break-all; }
+            #chWrap1 .chWrapContent .chBox .chComment .chCommentWrap ul li .chPerCommentBox, .chOdd .chWrapContent .chBox .chComment .chCommentWrap ul li .chPerCommentBox, .chEven .chWrapContent .chBox .chComment .chCommentWrap ul li .chPerCommentBox {
+              display: flex;
+              flex-wrap: wrap;
+              padding-left: 30px;
+              align-items: center;
+              margin-bottom: 10px;
+              width: 70%; }
+              #chWrap1 .chWrapContent .chBox .chComment .chCommentWrap ul li .chPerCommentBox .chPerRating, .chOdd .chWrapContent .chBox .chComment .chCommentWrap ul li .chPerCommentBox .chPerRating, .chEven .chWrapContent .chBox .chComment .chCommentWrap ul li .chPerCommentBox .chPerRating {
+                width: 150px;
+                height: 10px;
+                border-radius: 10px;
+                background-color: #fff;
+                margin-right: 20px; }
+                #chWrap1 .chWrapContent .chBox .chComment .chCommentWrap ul li .chPerCommentBox .chPerRating .chPerRatingBar, .chOdd .chWrapContent .chBox .chComment .chCommentWrap ul li .chPerCommentBox .chPerRating .chPerRatingBar, .chEven .chWrapContent .chBox .chComment .chCommentWrap ul li .chPerCommentBox .chPerRating .chPerRatingBar {
+                  width: 0;
+                  transition: 2s;
+                  height: 10px;
+                  background-color: #ffb242;
+                  border-radius: 10px; }
+              #chWrap1 .chWrapContent .chBox .chComment .chCommentWrap ul li .chPerCommentBox .chPertotalScore, .chOdd .chWrapContent .chBox .chComment .chCommentWrap ul li .chPerCommentBox .chPertotalScore, .chEven .chWrapContent .chBox .chComment .chCommentWrap ul li .chPerCommentBox .chPertotalScore {
+                color: #fff;
+                height: 20px; }
+              #chWrap1 .chWrapContent .chBox .chComment .chCommentWrap ul li .chPerCommentBox p, .chOdd .chWrapContent .chBox .chComment .chCommentWrap ul li .chPerCommentBox p, .chEven .chWrapContent .chBox .chComment .chCommentWrap ul li .chPerCommentBox p {
+                font-weight: bold;
+                margin-right: 10px; }
+              #chWrap1 .chWrapContent .chBox .chComment .chCommentWrap ul li .chPerCommentBox p:nth-child(1), .chOdd .chWrapContent .chBox .chComment .chCommentWrap ul li .chPerCommentBox p:nth-child(1), .chEven .chWrapContent .chBox .chComment .chCommentWrap ul li .chPerCommentBox p:nth-child(1) {
+                margin-right: 20px; }
+            #chWrap1 .chWrapContent .chBox .chComment .chCommentWrap ul li .chPerImg, .chOdd .chWrapContent .chBox .chComment .chCommentWrap ul li .chPerImg, .chEven .chWrapContent .chBox .chComment .chCommentWrap ul li .chPerImg {
+              width: 12%;
+              border-radius: 50%;
+              overflow: hidden;
+              float: left;
+              font-size: 0; }
+              #chWrap1 .chWrapContent .chBox .chComment .chCommentWrap ul li .chPerImg img, .chOdd .chWrapContent .chBox .chComment .chCommentWrap ul li .chPerImg img, .chEven .chWrapContent .chBox .chComment .chCommentWrap ul li .chPerImg img {
+                width: 100%;
+                height: 100%; }
+            #chWrap1 .chWrapContent .chBox .chComment .chCommentWrap ul li .chPerCommentContent, .chOdd .chWrapContent .chBox .chComment .chCommentWrap ul li .chPerCommentContent, .chEven .chWrapContent .chBox .chComment .chCommentWrap ul li .chPerCommentContent {
+              width: 70%;
+              max-height: 60px;
+              float: left;
+              font-size: 0;
+              box-sizing: border-box;
+              padding-left: 30px;
+             }
+              #chWrap1 .chWrapContent .chBox .chComment .chCommentWrap ul li .chPerCommentContent p, .chOdd .chWrapContent .chBox .chComment .chCommentWrap ul li .chPerCommentContent p, .chEven .chWrapContent .chBox .chComment .chCommentWrap ul li .chPerCommentContent p{
+                line-height: 1.5;
+              }
+            #chWrap1 .chWrapContent .chBox .chComment .chCommentWrap ul li .chMembox, .chOdd .chWrapContent .chBox .chComment .chCommentWrap ul li .chMembox, .chEven .chWrapContent .chBox .chComment .chCommentWrap ul li .chMembox {
+              width: 30%;
+              position: absolute;
+              right: 10px;
+              bottom: 10px;
+              text-align: right; }
+              #chWrap1 .chWrapContent .chBox .chComment .chCommentWrap ul li .chMembox p, .chOdd .chWrapContent .chBox .chComment .chCommentWrap ul li .chMembox p, .chEven .chWrapContent .chBox .chComment .chCommentWrap ul li .chMembox p {
+                font-weight: bold; }
+          #chWrap1 .chWrapContent .chBox .chComment .chCommentWrap ul li:nth-child(odd), .chOdd .chWrapContent .chBox .chComment .chCommentWrap ul li:nth-child(odd), .chEven .chWrapContent .chBox .chComment .chCommentWrap ul li:nth-child(odd) {
+            background-color: #68badd;
+            color: #141559; }
+          #chWrap1 .chWrapContent .chBox .chComment .chCommentWrap ul li:nth-child(even), .chOdd .chWrapContent .chBox .chComment .chCommentWrap ul li:nth-child(even), .chEven .chWrapContent .chBox .chComment .chCommentWrap ul li:nth-child(even) {
+            background-color: #1e3895;
+            color: #fff; }
+  #chWrap1 .chWrapContent .chBox.active, .chOdd .chWrapContent .chBox.active, .chEven .chWrapContent .chBox.active {
+    animation: fadeInRight 1s; }
+
+.chEven {
+  position: relative;
+  height: 650px; }
+  .chEven:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 500px;
+    -webkit-clip-path: polygon(0 70%, 0% 100%, 100% 100%);
+    clip-path: polygon(0 70%, 0% 100%, 100% 100%);
+    position: absolute;
+    top: -499px;
+    left: 0;
+    background-color: #ddd; }
+  .chEven:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 500px;
+    -webkit-clip-path: polygon(100% 70%, 0% 70%, 100% 100%);
+    clip-path: polygon(100% 70%, 0% 70%, 100% 100%);
+    position: absolute;
+    bottom: -149px;
+    left: 0;
+    background-color: #ddd;
+    z-index: 1; }
+  .chEven .chWrapContent {
+    flex-direction: row-reverse;
+    padding-top: 20px; }
+    .chEven .chWrapContent .chProfile h2 {
+      text-align: right; }
+    .chEven .chWrapContent .chBox .chComment .chCommentBox .chtotalScore {
+      color: #141559; }
+
+.chOdd {
+  position: relative;
+  height: 900px; }
+  .chOdd .chWrapContent {
+    padding-top: 140px; }
+
+#chWrap7 .chWrapContent .chProfile h4 {
+  color: #fff; }
+
+#chWrap7 .chWrapContent .chProfile .chDetail p {
+  color: #ddd; }
+
+#chWrap7 .chWrapContent .chProfile .chQual h4 {
+  color: #fff; }
+
+#chWrap7 .chWrapContent .chProfile .chQual ul li {
+  color: #ddd; }
+.chAct h4{
+  font-weight: 600;
+}
+.chQual h4{
+  font-weight: 600;
+}
+.chComment h4{
+  font-weight: 600;
+}
+.chProfile h4{
+  font-weight: 600;
+}
+#chWrap7 .chWrapContent .chBox .chAct h4 {
+  color: #fff; }
+
+#chWrap7 .chWrapContent .chBox .chAct ul li a {
+  color: #ddd; }
+  #chWrap7 .chWrapContent .chBox .chAct ul li a:visited {
+    color: #ddd; }
+
+#chWrap7 .chWrapContent .chBox .chComment h4 {
+  color: #fff; }
+
+#chWrap2 .chWrapContent .chImg, #chWrap3 .chWrapContent .chImg, #chWrap4 .chWrapContent .chImg, #chWrap5 .chWrapContent .chImg, #chWrap6 .chWrapContent .chImg, #chWrap7 .chWrapContent .chImg {
+  display: none; }
+
+#chWrap2 .chWrapContent .chProfile, #chWrap3 .chWrapContent .chProfile, #chWrap4 .chWrapContent .chProfile, #chWrap5 .chWrapContent .chProfile, #chWrap6 .chWrapContent .chProfile, #chWrap7 .chWrapContent .chProfile {
+  display: none; }
+
+#chWrap2 .chWrapContent .chBox, #chWrap3 .chWrapContent .chBox, #chWrap4 .chWrapContent .chBox, #chWrap5 .chWrapContent .chBox, #chWrap6 .chWrapContent .chBox, #chWrap7 .chWrapContent .chBox {
+  display: none; }
+
+@media all and (max-width: 1200px) {
+  .chWrapContent {
+    max-width: 100%;
+    margin: auto; }
+  .chTitle {
+    width: 100%; } }
+
+@media all and (max-width: 992px) {
+  .chBox .chComment .chCommentWrap ul li .chMembox {
+    flex-direction: row-reverse; }
+    .chBox .chComment .chCommentWrap ul li .chMembox .chDate {
+      display: none; }
+  #chWrap1 .chWrapContent .chImg .chBtnBox, .chOdd .chWrapContent .chImg .chBtnBox, .chEven .chWrapContent .chImg .chBtnBox {
+    display: block; }
+    #chWrap1 .chWrapContent .chImg .chBtnBox button, .chOdd .chWrapContent .chImg .chBtnBox button, .chEven .chWrapContent .chImg .chBtnBox button {
+      width: 100%;
+      margin: 5px 0; }
+  #chWrap1 .chWrapContent .chProfile .chBtnBox, .chOdd .chWrapContent .chProfile .chBtnBox, .chEven .chWrapContent .chProfile .chBtnBox {
+    display: none; } }
+
+@media all and (max-width: 767px) {
+  .chFull {
+    display: none; }
+  .chRwdFull {
+    display: block;
+    position: relative;
+    background-image: url("../images/ch_bg1.jpg");
+    height: auto;
+    overflow: hidden; }
+    .chRwdFull .chContent {
+      width: 100%;
+      height: auto;
+      position: relative; }
+      .chRwdFull .chContent .fa-chevron-circle-left {
+        font-size: 30px;
+        color: #fff;
+        position: absolute;
+        opacity: 0.8;
+        top: 40vh;
+        animation: myarrowleft 2s;
+        animation-iteration-count: infinite; }
+      .chRwdFull .chContent .fa-chevron-circle-right {
+        font-size: 30px;
+        color: #fff;
+        position: absolute;
+        opacity: 0.8;
+        top: 40vh;
+        right: 0;
+        animation: myarrowright 2s;
+        animation-iteration-count: infinite; }
+      .chRwdFull .chContent .chNameBox {
+        padding: 5px 20px;
+        position: absolute;
+        top: 40px;
+        left: 0;
+        background-color: #07336e;
+        color: #fff;
+        border-radius: 0 5px 5px 0; }
+      .chRwdFull .chContent .chImg {
+        width: 100%;
+        overflow: hidden;
+        height: 45vh;
+        border-radius: 0 0 50% 50%;
+        box-sizing: border-box;
+        border-bottom: 15px solid #d9e3ec; }
+        .chRwdFull .chContent .chImg img {
+          width: 100%; }
+      .chRwdFull .chContent .chBtnBox {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        padding: 20px 50px;
+        box-sizing: border-box;
+        justify-content: space-between; }
+        .chRwdFull .chContent .chBtnBox button {
+          border-radius: 50%;
+          width: 20%;
+          height: 0;
+          padding-bottom: 15%;
+          border: 1px solid #fff;
+          position: relative; }
+          .chRwdFull .chContent .chBtnBox button p {
+            width: 100%;
+            height: 10px;
+            position: absolute;
+            margin: auto;
+            top: 0;
+            bottom: 10px;
+            left: 0;
+            right: 0; }
+      .chRwdFull .chContent .chDetail {
+        width: 100%;
+        padding: 0 10px 30px;
+        box-sizing: border-box;
+        line-height: 1.5; }
+        .chRwdFull .chContent .chDetail p {
+          padding: 10px;
+          background-color: #d9e3ec;
+          box-sizing: border-box;
+          opacity: .9;
+          border-radius: 5px;
+          line-height: 1.5; }
+      .chRwdFull .chContent .chAct {
+        padding-bottom: 20px; }
+        .chRwdFull .chContent .chAct h4 {
+          width: 50%;
+          height: 20px;
+          background-color: #07336e;
+          border-radius: 0 100px 100px 0;
+          padding: 10px 10px;
+          line-height: 20px;
+          color: #fff;
+          border-right: 1px solid #fff;
+          border-bottom: 2px solid #fff; }
+        .chRwdFull .chContent .chAct ul {
+          padding: 20px 10px;
+          display: flex;
+          flex-wrap: wrap; }
+          .chRwdFull .chContent .chAct ul li {
+            width: 50%;
+            height: 0;
+            padding-bottom: 50%;
+            text-align: center;
+            position: relative;
+            box-sizing: border-box; }
+            .chRwdFull .chContent .chAct ul li a {
+              display: block;
+              width: 100%;
+              text-decoration: none;
+              color: #fff;
+              overflow: hidden; }
+              .chRwdFull .chContent .chAct ul li a img {
+                width: 100%;
+                vertical-align: middle; }
+              .chRwdFull .chContent .chAct ul li a:visited {
+                color: #fff; }
+    .chRwdFull .chContent.active {
+      animation: rotateInDownRight 1s; } }
+
+@keyframes myarrowleft {
+  from {
+    left: 0px; }
+  to {
+    left: 10px; } }
+
+@keyframes myarrowright {
+  from {
+    right: 0px; }
+  to {
+    right: 10px; } }

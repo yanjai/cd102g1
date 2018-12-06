@@ -1,0 +1,828 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/*模組CSS button start*/
+/*按鈕1 start*/
+button {
+  font-family: "微軟正黑體";
+  font-size: 16px;
+  background: #07336e;
+  color: #fff;
+  border: none;
+  padding: 8px 15px; }
+  button a {
+    color: #fff;
+    text-decoration: none; }
+
+button:hover {
+  background: #30abdb;
+  cursor: pointer; }
+
+/*按鈕1 end*/
+/*按鈕2 start*/
+.button {
+  background-color: #7eafc7;
+  color: #fff;
+  text-align: center;
+  transition: all 0.5s;
+  display: inline-block;
+  cursor: pointer;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 20px; }
+  .button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.4s; }
+    .button span a {
+      color: #fff;
+      text-decoration: none; }
+
+.button {
+  margin-bottom: 800px; }
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s; }
+
+.button:hover {
+  background: #59a9ba; }
+  .button:hover span {
+    padding-right: 25px; }
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0; }
+
+/*按鈕2 end*/
+/*模組CSS button end*/
+/*內頁公版 header、footer CSS start*/
+body.content {
+  background-image: url("../images/body-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom right; }
+
+nav ul li {
+  display: inline-block;
+  text-align: center; }
+
+nav ul li a {
+  text-align: center; }
+
+.navmenu ul li a:after {
+  content: "";
+  display: block;
+  width: 0;
+  padding: 0 0 6px 0;
+  border-bottom: 2px solid #3db7e4;
+  transition: width 0.3s ease-in-out;
+  margin: auto; }
+
+.navmenu .navmenu li a:hover {
+  color: #3db7e4; }
+
+/*nav .navmenu li a:hover:after {
+  width: 100%; }*/
+
+nav {
+  background-image: url("../images/header.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10; }
+
+nav a {
+  color: #fff;
+  text-decoration: none; }
+
+/*nav logo*/
+.logobox {
+  width: 120px;
+  height: 130px;
+  box-shadow: 3px 3px 16px 6px rgba(20, 20, 20, 0.4);
+  border-radius: 0 0 1000px 1000px;
+  background-color: #123a6f;
+  position: absolute;
+  transition: 0.5s;
+  z-index: 3;
+  top: 0;
+  left: 5%; }
+
+.logobox img {
+  width: 90%;
+  margin: 5%;
+  height: auto; }
+
+/*nav manu*/
+.navbar {
+  width: 100vw;
+  height: 90px;
+  background-color: #123a6f;
+  box-shadow: 3px 3px 16px 6px rgba(20, 20, 20, 0.4);
+  padding: 0 5%;
+  box-sizing: border-box;
+  position: fixed;
+  transition: .5s; }
+
+.top {
+  float: right; }
+
+.clearfix {
+  clear: both; }
+
+.headerIcon {
+  transition: 0.5s;
+  display: flex;
+  flex-direction: row; }
+
+.headerIcon li {
+  color: #fffffe;
+  font-size: 20px;
+  padding: 10px 0px 5px 10px;
+  box-sizing: border-box; }
+
+/*menu */
+.navContainer {
+  float: right;
+  box-sizing: border-box; }
+
+.navmenu {
+  margin-right: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end; }
+
+.navmenu li {
+  padding: 15px;
+  box-sizing: border-box; }
+
+input#checkboxMenu {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 9px; }
+
+/*content start*/
+.contentArea {
+  max-width: 1200px;
+  margin: auto; }
+
+footer {
+  background: #041748;
+  padding: 20px;
+  position: relative;
+  z-index: 2;
+   }
+
+footer p {
+  color: #fff;
+  text-align: center; }
+
+.content button {
+  margin-bottom: 100px; }
+
+.gotoTop {
+  position: fixed;
+  right: -30px;
+  bottom: 10px;
+  z-index: 10; }
+  .gotoTop img {
+    width: 60%; }
+
+.gotoTop span {
+  position: fixed;
+  right: 83px;
+  bottom: 81px;
+  color: #fff; }
+
+.addtop {
+  max-height: 100px;
+  position: relative;
+  top: -10px;
+  transition: 0.5s; }
+
+.lo {
+  width: 8%; }
+
+.Swid {
+  width: 6%; }
+
+.headerIcon li a:hover {
+  color: #ffb242;
+  cursor: pointer; }
+
+.headerIcon li i:hover {
+  color: #ffb242;
+  cursor: pointer; }
+
+/*內頁公版 header、footer end*/
+/*呼叫 H1~H6使用*/
+body {
+  font-size: 16px;
+  color: #000; }
+
+h1 {
+  font-size: 28px; }
+
+h2 {
+  font-size: 26px; }
+
+h3 {
+  font-size: 24px; }
+
+h4 {
+  font-size: 22px; }
+
+h5 {
+  font-size: 20px; }
+
+h6 {
+  font-size: 18px; }
+
+p {
+  font-size: 16px;
+  line-height: 18px; }
+
+.col-1 {
+  width: 8.33333%;
+  padding: 0 15px;
+  box-sizing: border-box; }
+
+.col-2 {
+  width: 16.66667%;
+  padding: 0 15px;
+  box-sizing: border-box; }
+
+.col-3 {
+  width: 25%;
+  padding: 0 15px;
+  box-sizing: border-box; }
+
+.col-4 {
+  width: 33.33333%;
+  padding: 0 15px;
+  box-sizing: border-box; }
+
+.col-5 {
+  width: 41.66667%;
+  padding: 0 15px;
+  box-sizing: border-box; }
+
+.col-6 {
+  width: 50%;
+  padding: 0 15px;
+  box-sizing: border-box; }
+
+.col-7 {
+  width: 58.33333%;
+  padding: 0 15px;
+  box-sizing: border-box; }
+
+.col-8 {
+  width: 66.66667%;
+  padding: 0 15px;
+  box-sizing: border-box; }
+
+.col-9 {
+  width: 75%;
+  padding: 0 15px;
+  box-sizing: border-box; }
+
+.col-10 {
+  width: 83.33333%;
+  padding: 0 15px;
+  box-sizing: border-box; }
+
+.col-11 {
+  width: 91.66667%;
+  padding: 0 15px;
+  box-sizing: border-box; }
+
+.col-12 {
+  width: 100%;
+  padding: 0 15px;
+  box-sizing: border-box; }
+
+* {
+  text-decoration: none; }
+
+body {
+  font-family: "微軟正黑體"; }
+
+/* Full-width input fields */
+input[type=text], input[type=password], input[type=email] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  }
+
+/* Set a style for all buttons */
+#btnLogin, #btnFBLogin {
+  padding: 14px 20px;
+  margin: 10px 0px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  float: left;
+   }
+   #btnFBLogin{
+    display:none;
+   }
+
+#btnLogin:hover, #btnFBLogin:hover {
+  opacity: 0.8; }
+
+.log {
+  margin-right: 4%; }
+
+.fbLog {
+  background: #4267B2; }
+
+/* Extra styles for the cancel button */
+/* Center the image and position the close button */
+.imgContainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative; }
+
+img.avatar {
+  width: 20%;
+  border-radius: 50%; }
+
+.memContainer {
+  padding: 16px; }
+
+.memContainer img {
+  width: 100%; }
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 10;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: hidden;
+  /* Enable scroll if needed */
+  background-color: #9b9b9b;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+  }
+
+/* Modal Content/Box */
+.modalContent {
+  background-color: rgba(255, 255, 255, 0.65);
+  margin: 5% auto 15% auto;
+  /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 40%;
+  /* Could be more or less, depending on screen size */
+  border-radius: 10px;
+  box-shadow: 0 0px 10px 0 rgba(100, 100, 255, 0.5); }
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold; }
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer; }
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s; }
+
+.center {
+  text-align: center; }
+
+.right {
+  text-align: right;
+  margin: 10px;
+  float: right; }
+
+.regPsw {
+  margin-bottom: 30px; }
+
+.psw {
+  color: #072760; }
+
+.reg {
+  color: #0c38a3;
+  margin-left: 20px; }
+
+.fishSwim {
+  position: relative;
+  width: 24%; }
+
+.fish1 img {
+  position: absolute;
+  left: 300%;
+  animation: fishSwim1 10s 0s infinite;
+  animation-play-state: running; }
+
+@keyframes fishSwim1 {
+  0% {
+    left: 300%;
+    transform: rotateY(0deg); }
+  25% {
+    left: 50%;
+    transform: rotateY(0deg); }
+  50% {
+    left: 50%;
+    transform: rotateY(180deg); }
+  75% {
+    left: 300%;
+    transform: rotateY(180deg); }
+  100% {
+    left: 300%;
+    transform: rotateY(0deg); } }
+
+element.style {
+  transform: translateY(0px) scale(1);
+  font-size: 18px;
+  color: #cccccc; }
+
+.form_crl p {
+  width: 20%;
+  position: absolute;
+  font-size: 18px;
+  bottom: 15px;
+  left: -5%;
+  transition: .5s;
+  color: #ccc;
+  cursor: text; }
+
+element.style {
+  transform: translateY(-30px);
+  font-size: 14px;
+  color: #aaaaff; }
+
+.form_crl {
+  margin: 40px auto;
+  width: 80%;
+  border-bottom: 1px solid #ccc;
+  position: relative; }
+
+.form_crl p {
+  width: 20%;
+  position: absolute;
+  font-size: 18px;
+  bottom: 15px;
+  left: -5%;
+  transition: .5s;
+  color: #ccc;
+  cursor: text; }
+
+.ser_form input {
+  width: 100%;
+  height: 40px;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  padding: 0;
+  color: #555; }
+
+.ser_form {
+  float: right;
+  width: 50%; }
+
+.form_crl:after {
+  content: "";
+  margin: auto;
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  opacity: 0;
+  display: block;
+  border: 1px solid #f00;
+  transition: .5s; }
+
+.form_crl.new_crl:after {
+  content: "";
+  margin: auto;
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  opacity: 1;
+  display: block;
+  border: 1px solid #aaf;
+  transition: .5s; }
+
+.memContainer .member {
+  display: block;
+  border-radius: 8px; }
+
+.sign:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
+
+.content button {
+  margin-bottom: 10px; }
+
+#spanLogin {
+  color: #ccc;
+  cursor: pointer;
+  padding-top: 15px;
+  padding-left: 5px; }
+
+#memName {
+  /* color: #ccc;  */
+  padding-top: 15px;
+  padding-left: 5px; }
+
+.regName2 {
+  color: #6f6b6b;
+  padding: 12px 20px;
+}
+
+.seaName {
+  color: #ccc;
+}
+
+.topName {
+  color: #ccc;
+}
+
+#spanLogin:hover {
+  color: #ffb242; }
+
+.memUp {
+  float: left;
+  width: auto;
+  border: none;
+  display: block;
+  outline: 0; }
+
+@-webkit-keyframes animatezoom {
+  from {
+    -webkit-transform: scale(0); }
+  to {
+    -webkit-transform: scale(1); } }
+
+@keyframes animatezoom {
+  from {
+    transform: scale(0); }
+  to {
+    transform: scale(1); } }
+
+@media all and (max-width: 992px) {
+  .logobox {
+    width: 80px;
+    height: 80px; }
+  .headBanner {
+    padding-bottom: 120px; }
+  .navmenu {
+    margin: 0; }
+  .navbarBottom {
+    padding-left: 2%;
+    box-sizing: border-box; }
+  .contentArea {
+    padding: 2%;
+    box-sizing: border-box; }
+  .modalContent {
+    width: 55%; }
+  .member {
+    width: 100%; }
+  #spanLogin {
+    color: #ccc;
+    cursor: pointer;
+    padding-top: 15px;
+    padding-left: 5px; }
+  #memName {
+    color: #ccc;
+    /*cursor: pointer;*/
+    padding-top: 15px;
+    padding-left: 5px; }
+  #btnLogin, #btnFBLogin {
+    padding: 14px 20px;
+    margin: 10px 0px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    float: left; }
+  #spanLogin:hover {
+    color: #ffb242; }
+  .ser_form input {
+    width: 100%;
+    height: 40px;
+    font-size: 18px;
+    border: none;
+    outline: none; }
+  .memContainer img {
+    width: 100%; } 
+  .regName2 {
+    color: #6f6b6b;
+    padding: 12px 20px;
+  }
+
+}
+
+@media all and (max-width: 767px) {
+
+  /*nav .navmenu li a:hover:after {
+    width: 0;
+  }*/
+  #btnLogin, #btnFBLogin {
+    width: 100%;
+    margin: 5px 0px; }
+  .navbar {
+    height: 50px; }
+  .logobox {
+    width: 60px;
+    height: 60px;
+    left: calc(50%-40px);
+    padding: 10px 5px 5px 5px; }
+  .logobox img {
+    width: 90%;
+    margin: 0 5% 5% 5%; }
+  .headerIcon li {
+    font-size: 16px;
+    padding: 2px 10px 7px 7px; }
+  .navmenu li {
+    padding: 5px;
+    box-sizing: border-box; }
+  .han {
+    width: 25px;
+    height: 1px;
+    margin: 8px auto;
+    background-color: #b3e5f7;
+    display: block;
+    transition: 1s; }
+  .hanMenu {
+    position: absolute;
+    text-align: right;
+    top: 20%;
+    right: 5%;
+    cursor: pointer;
+    z-index: 3; }
+  .navContainer {
+    padding: 0; }
+  .navmenu {
+    display: none;
+    transition: .5s; }
+  .navmenu li {
+    display: block;
+    margin: 0;
+    width: 30.5%;
+    display: block;
+    transition: 0.5s;
+    position: relative; }
+  input#checkboxMenu {
+    position: fixed;
+    top: 40px;
+    right: 40px;
+    opacity: 0; }
+  .navbar {
+    padding: 0%; }
+  .navbar .top {
+    position: absolute;
+    top: 30%;
+    right: 12%;
+    bottom: 0;
+    margin: auto; }
+  nav ul li a:after {
+    border-bottom: none; }
+  nav ul li a {
+    font-size: 20px; }
+  #checkboxMenu:checked ~ .hanMenu {
+    top: 34%; }
+  #checkboxMenu:checked ~ .navmenu {
+    display: block;
+    right: 0px;
+    padding-top: 20%;
+    width: 100vw;
+    height: 100vh;
+    background-color: #123a6f;
+    flex-direction: column;
+    z-index: 4; }
+  #checkboxMenu:checked ~ .navmenu li {
+    top: 13vh;
+    width: 100%;
+    line-height: 30px;
+    transition: .5s; }
+  #checkboxMenu:checked ~ .hanMenu .hanTop {
+    transform: translateY(1px) rotateZ(223deg);
+    background-color: #fff; }
+  #checkboxMenu:checked ~ .hanMenu .hanMid {
+    display: none; }
+  #checkboxMenu:checked ~ .hanMenu .hanBtm {
+    transform: translateY(-8px) rotateZ(-223deg);
+    background-color: #fff; }
+  .headBanner {
+    padding-bottom: 80px; }
+  .navbarBottom {
+    display: none; }
+  .modalContent {
+    width: 80%;
+    max-width: 500px;
+    padding: 3vh 0vh; }
+  .member {
+    width: 100%; }
+  #spanLogin {
+    color: #ccc;
+    cursor: pointer;
+    padding-top: 4px;
+    padding-left: 8px; 
+    vertical-align: text-bottom;
+  }
+  #memName {
+    color: #ccc;
+    /*cursor: pointer;*/
+    padding-top: 4px;
+    padding-left: 8px; 
+    vertical-align: text-bottom;
+  }
+
+  span#spanLogin{
+    vertical-align: text-bottom;
+  }  
+  #spanLogin:hover {
+    color: #ffb242; }
+  .ser_form input {
+    width: 100%;
+    height: 40px;
+    font-size: 18px;
+    border: none;
+    outline: none; }
+  .memContainer img {
+    width: 100%; } 
+  .regName2 {
+    color: #6f6b6b;
+    padding: 12px 20px;
+  }
+}

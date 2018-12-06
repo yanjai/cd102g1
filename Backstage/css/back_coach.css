@@ -1,0 +1,36 @@
+.Table {
+  width: auto;
+  border-collapse: collapse; }
+  .Table .Tr {
+    width: 100%;
+    font-size: 0; }
+    .Table .Tr:nth-child(odd) {
+      background-color: #DEDEDE; }
+    .Table .Tr:nth-child(even) {
+      background-color: #fff; }
+    .Table .Tr:first-child {
+      background-color: #222222;
+      color: #fff;
+      font-size: 20px;
+      font-weight: 800; }
+      .Table .Tr:first-child .col-big {
+        width: 250px;
+        overflow: hidden;
+        vertical-align: middle; }
+    .Table .Tr .col {
+      width: 205px;
+      height: 40px;
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+      font-size: 16px;
+      padding: 3px;
+      line-height: 1.5; }
+      .Table .Tr .col img {
+        width: 70%; }
+    .Table .Tr .col.col-num {
+      width: 80px; }
+    .Table .Tr .col-big {
+      width: 250px;
+      overflow: hidden;
+      vertical-align: top; }

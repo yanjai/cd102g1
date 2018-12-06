@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0,viewport-fit=cover">
+	<title>First Loading Page</title>
+	
+	<style>
+			/* http://meyerweb.com/eric/tools/css/reset/ 
+	   v2.0 | 20110126
+	   License: none (public domain)
+	*/
+
+	html, body, div, span, applet, object, iframe,
+	h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+	a, abbr, acronym, address, big, cite, code,
+	del, dfn, em, img, ins, kbd, q, s, samp,
+	small, strike, strong, sub, sup, tt, var,
+	b, u, i, center,
+	dl, dt, dd, ol, ul, li,
+	fieldset, form, label, legend,
+	table, caption, tbody, tfoot, thead, tr, th, td,
+	article, aside, canvas, details, embed, 
+	figure, figcaption, footer, header, hgroup, 
+	menu, nav, output, ruby, section, summary,
+	time, mark, audio, video {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		font-size: 100%;
+		font: inherit;
+		vertical-align: baseline;
+
+	}
+	/* HTML5 display-role reset for older browsers */
+	article, aside, details, figcaption, figure, 
+	footer, header, hgroup, menu, nav, section {
+		display: block;
+	}
+	body {
+		line-height: 1;
+	}
+	ol, ul {
+		list-style: none;
+	}
+	blockquote, q {
+		quotes: none;
+	}
+	blockquote:before, blockquote:after,
+	q:before, q:after {
+		content: '';
+		content: none;
+	}
+	table {
+		border-collapse: collapse;
+		border-spacing: 0;
+	}
+	body{
+		font-family:"微軟正黑體";
+		overflow: hidden;
+	}
+
+
+
+
+	.wrapperBg{
+		background-image: url('images/firstloading_bg.png');
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center center; 
+		height: 100vh;
+	}
+
+	.loadingSlogen{
+		display: flex;
+		flex-wrap: wrap;
+		max-width: 1200px;
+		margin: auto;
+
+	}
+	.loadingSlogen{
+		position: relative;
+
+		animation:animateupAnddown 3s linear infinite;
+	}
+
+	@keyframes animateupAnddown{
+		0%{
+	       top:250px;
+		}
+
+		50%{
+		   top:260px;
+		}
+		100%{
+		   top:250px;
+		}
+
+	}
+
+	.loadingSlogen img{
+		max-width: 100%;
+		position: absolute;
+		top:-50%;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto;
+		text-align: center;
+		z-index: 4;
+
+	}
+
+	.loadingSeagull{
+		position: absolute;
+		top:0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto;
+		text-align: center;
+	}
+	.loadingSeagull.left{
+		right:30%;
+	}
+	.loadingSeagull.right{
+		left:30%;
+	}
+
+	.wrapper1{
+		height: 953px;
+			
+	}
+
+	.wrapper2{
+		position: absolute;
+		top: 0;
+		bottom:0;
+		right:0;
+		left: 0;
+		margin: auto;
+		display: flex;
+		/*flex-wrap: wrap;*/
+		justify-content: space-around;
+		align-items: center;
+	}
+
+
+
+	/*前端 後端 CSS 擴張 start*/
+
+	.item p{
+		font-family:"微軟正黑體";
+		color:#fff;
+	}
+	.item p a{
+		color:#fff;
+		text-decoration: none;
+	}
+
+	.ih-item.circle {
+	    position: relative;
+	    width: 220px;
+	    height: 220px;
+	    border-radius: 50%;
+	}
+
+	.ih-item.circle .img img {
+	    border-radius: 50%;
+	}
+	.ih-item, .ih-item * {
+	    -webkit-box-sizing: border-box;
+	    -moz-box-sizing: border-box;
+	    box-sizing: border-box;
+	}
+
+	img {
+	    vertical-align: middle;
+	}
+
+	.ih-item img {
+	    width: 100%;
+	    height: 100%;
+	}
+
+
+	.ih-item.circle .img:before {
+	    position: absolute;
+	    display: block;
+	    content: '';
+	    width: 100%;
+	    height: 100%;
+	    border-radius: 50%;
+	    box-shadow: inset 0 0 0 10px rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.7);
+	    -webkit-transition: all 0.35s ease-in-out;
+	    -moz-transition: all 0.35s ease-in-out;
+	    transition: all 0.35s ease-in-out;
+	}
+
+	.ih-item.circle .info {
+	    position: absolute;
+	    top: 0;
+	    bottom: 0;
+	    left: 0;
+	    right: 0;
+	    text-align: center;
+	    border-radius: 50%;
+	    -webkit-backface-visibility: hidden;
+	    backface-visibility: hidden;
+	}
+
+	.ih-item.circle.effect6 .img {
+	  opacity: 1;
+	  -webkit-transform: scale(1);
+	  -moz-transform: scale(1);
+	  -ms-transform: scale(1);
+	  -o-transform: scale(1);
+	  transform: scale(1);
+	  -webkit-transition: all 0.35s ease-in-out;
+	  -moz-transition: all 0.35s ease-in-out;
+	  transition: all 0.35s ease-in-out;
+	}
+
+	.ih-item.circle.effect6 .info {
+	  background:transparent;
+	  opacity: 0.8;
+	  -webkit-transition: all 0.35s ease-in-out;
+	  -moz-transition: all 0.35s ease-in-out;
+	  transition: all 0.35s ease-in-out;
+	}
+
+
+	.ih-item.circle.effect6 .info h3 {
+		font-family: "微軟正黑體";
+	    color: #fff;
+	    text-transform: uppercase;
+	    position: relative;
+	    letter-spacing: 2px;
+	    font-size: 32px;
+	    margin: 0 30px;
+	    line-height: 218px;
+	    height: 110px;
+	    text-shadow: 0 0 1px white, 0 1px 2px rgba(0, 0, 0, 0.3);
+	    font-weight: 500;
+	}
+	.ih-item.circle.effect6 .info p {
+	  color: #bbb;
+	  padding: 10px 5px;
+	  font-style: italic;
+	  margin: 0 30px;
+	  font-size: 12px;
+	  border-top: 1px solid rgba(255, 255, 255, 0.5);
+	}
+
+	.ih-item.circle.effect6.scale_up .info {
+	  -webkit-transform: scale(0.9);
+	  -moz-transform: scale(0.9);
+	  -ms-transform: scale(0.9);
+	  -o-transform: scale(0.9);
+	  transform: scale(0.9);
+	}
+	.ih-item.circle.effect6.scale_up a:hover .img {
+	  opacity: 0;
+	  -webkit-transform: scale(1.5);
+	  -moz-transform: scale(1.5);
+	  -ms-transform: scale(1.5);
+	  -o-transform: scale(1.5);
+	  transform: scale(1.5);
+	}
+	.ih-item.circle.effect6.scale_up a:hover .info {
+	  opacity: 1;
+	  -webkit-transform: scale(1);
+	  -moz-transform: scale(1);
+	  -ms-transform: scale(1);
+	  -o-transform: scale(1);
+	  transform: scale(1);
+	  background:#013668;
+
+	}
+	.effect6{
+		width:960px;
+		margin:30px auto;
+	}
+
+	/*前端 後端 CSS 擴張 end*/
+
+
+
+	.left1{
+		position: absolute;
+		top: 5%;
+    	left: 44%;
+		animation:tomove1 1.3s infinite;
+
+	}
+	.left2{
+		position: absolute;
+		top: 24%;
+    	left: 46%;
+    	animation:tomove2 1.5s infinite;
+	}
+	.left3{
+		position: absolute;
+		top: 10%;
+    	left: 52%;
+    	animation:tomove3 1.4s infinite;
+	}
+	.left4{
+		position: absolute;
+		top: 11%;
+    	left: 37%;
+    	animation:tomove4 1.5s infinite;
+	}
+
+	.right1{
+		position: relative;
+		animation:tomove 1.5s infinite;
+	}
+
+	/*@keyframes mymove{
+		0%{
+			transform: rotate(5deg);
+		}
+		20%{
+			transform: rotate(10deg);
+		}
+		50%{
+			transform: rotate(15deg);
+		}
+		75%{
+			transform: rotate(10deg);
+		}
+		100%{
+			transform: rotate(0deg);
+		}
+		
+	}*/
+
+	@keyframes tomove{
+		0%{
+	       top:0px;
+		}
+
+		50%{
+		   top:10px;
+		}
+		100%{
+		   top:0px;
+		}
+	}
+
+
+	@keyframes tomove1{
+		0%{
+	       top:30px;
+		}
+
+		50%{
+		   top:35px;
+		}
+		100%{
+		   top:30px;
+		}
+	}
+
+
+	@keyframes tomove2{
+		0%{
+	       top:250px;
+		}
+
+		50%{
+		   top:255px;
+		}
+		100%{
+		   top:250px;
+		}
+	}
+
+
+	@keyframes tomove3{
+		0%{
+	       top:100px;
+		}
+
+		50%{
+		   top:105px;
+		}
+		100%{
+		   top:100px;
+		}
+	}
+
+	@keyframes tomove4{
+		0%{
+	       top:120px;
+		}
+
+		50%{
+		   top:125px;
+		}
+		100%{
+		   top:120px;
+		}
+	}
+
+
+
+	@media all and (max-width: 767px){
+
+		/*.loadingSlogen img {
+		     margin-top: 20px !important;
+		    
+		}*/
+
+		.loadingSlogen{
+			position: relative;
+			top:30%;
+		}
+
+		.ih-item.circle {
+		    position: relative;
+		    width: 150px;
+		    height: 150px;
+		    border-radius: 50%;
+		}
+		.loadingSlogen img {
+		    top: 0%;
+		    width: 60%;
+		    position: absolute;
+		    bottom: 150px;
+		}
+
+		.ih-item.circle.effect6 .info h3 {
+    		line-height: 149px;}
+		.left2{
+			display: none;
+		}
+
+    	.loadingSeagull.left {
+		    right: 65%;
+		}	
+		img.right1 {
+	       width: 60%;
+		}
+
+		img.left4{
+			width: 70%;
+		}
+
+		.ih-item.circle.effect6 .info h3 {
+    		text-shadow: 2px 2px 4px rgba(50,50,50,.6);
+		}
+
+		.ih-item.circle.effect6.scale_up a:hover .img,.ih-item.circle.effect6.scale_up a:hover .info{
+		  -webkit-transform: scale(1);
+		  -moz-transform: scale(1);
+		  -ms-transform: scale(1);
+		  -o-transform: scale(1);
+		  transform: scale(1);
+		}
+
+		.ih-item.circle .img:before {
+    	box-shadow: inset 0 0 0 5px rgba(255, 255, 255, 0.4), 0 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+
+</style>
+<link rel="Shortcut Icon" type="image/x-icon" href="images/ico.ico">
+<link rel="stylesheet" type="text/css" href="css/firstloadingpage.css">
+
+</head>
+
+<body>
+<div class="wrapperBg">
+	<div class="loadingSlogen">
+		<img src="images/firstloading_slogen.png">
+	</div>
+
+	<div class="loadingSeagull left">
+		<!-- <img src="images/firstloading_Seagull1.png"> -->
+		<img class="left1" src="images/firstloading_Seagullleft1.png">
+		<img class="left2" src="images/firstloading_Seagullleft2.png">
+		<img class="left3" src="images/firstloading_Seagullleft3.png">
+		<img class="left4" src="images/firstloading_Seagullleft4.png">
+	</div>
+
+	<div class="loadingSeagull right">
+		<img class="right1" src="images/firstloading_Seagull2.png">
+	</div>
+
+	<div class="wrapper2">
+		<div class="item">
+			<!--前端 擴張 start-->
+			<div class="ih-item circle colored effect6 scale_up">
+		    	<a href="seatunnel.php">
+		          <div class="img"><img src="images/test1.jpg" alt="img"></div>
+		          <div class="info">
+		            <h3>前端</h3>
+		          </div>
+		        </a>
+		    </div>
+		    <!--前端 擴張 end-->
+		</div>
+		<div class="item">
+			<!--後端 擴張 start-->
+			<div class="ih-item circle colored effect6 scale_up">
+		    	<a href="Backstage/backLogin.php">
+		          <div class="img"><img src="images/test2.jpg" alt="img"></div>
+		          <div class="info">
+		            <h3>後端</h3>
+		          </div>
+		        </a>
+		    </div>
+		    <!--後端 擴張 end-->
+		</div>
+	</div>
+
+	<!--泡泡 Start-->
+	<div class="wrapper1">
+		<div class="header">
+	    </div>
+	</div>
+	<!--泡泡 End-->
+</div>
+
+
+
+    <!--泡泡js Start--> 
+	<script src="http://cdn.bootcss.com/jquery/1.11.0/jquery.min.js" type="text/javascript"></script>
+	<script src="js/circleMagic.min.js"></script>
+	<script>
+	        $('.header').circleMagic({
+	            elem: '.header',
+	            radius: 30,
+	            densety: .3,
+	            color: 'rgba(255, 255, 255,0.4)',
+	            // color: 'random',
+	            clearOffset: .10
+	        });
+	</script>
+	<!--泡泡js end--> 
+
+	
+
+
+
+
+
+
+
+
+
+</body>
+</html>

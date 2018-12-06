@@ -1,0 +1,156 @@
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+/* Icons */
+
+main {
+	position: relative;
+	width: 1200px;
+	margin: auto;
+	overflow: hidden;
+	margin-top: 120px;
+}
+
+/* Content */
+
+/* items */
+.item {
+	position: relative;
+	/*margin-top: 10vh;*/
+	width: 33%;
+	max-width: 100%;
+	display: inline-flex;
+	flex-wrap: nowrap;
+	align-items: center;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	/*grid-column: span 2;*/
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+
+.item__svg {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.item__clippath,
+.item__deco,
+.item__img {
+	transform-origin: 50% 50%;
+}
+
+.item__meta {
+	position: absolute;
+	top: 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	width: 80%;
+	left: 10%;
+	height: 100%;
+	color: #07336e;
+}
+.item__meta > span{
+	line-height:30px;
+	color: #fff;
+	background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(50,70,80,.9) 50%, rgba(0,0,0,0) 100%);
+	text-shadow: 5px 5px 6px rgba(25,25,25,.8);
+
+}
+.item__number {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	letter-spacing: 0.5em;
+	text-transform: uppercase;
+}
+
+.item__specimen {
+	font-size: 70px;
+	font-weight: 500;
+	line-height: 0.9;
+	vertical-align: text-bottom;
+	letter-spacing: -0.025em;
+}
+
+.item__reference {
+	letter-spacing: -0.025em;
+	font-size: 20px;
+	-webkit-writing-mode: vertical-rl;
+	writing-mode: vertical-rl;
+}
+
+.item__title {
+	font-size: 16px;
+	font-weight: 600;
+	width: 100%;
+	margin: 1em 0 0 0;
+	text-align: center;
+	display: block;
+	letter-spacing: 0.125em;
+}
+
+.item__subtitle {
+	font-size: 1em;
+	font-weight: 500;
+	margin: 0.5em 0 0;
+	text-align: center;
+	letter-spacing: 0.15em;
+	opacity: 0;
+}
+
+/* Individual styles */
+
+.item--style-4 .item__deco {
+	fill: rgba(50,60,70,.4);
+}
+
+@media screen and (max-width: 1440px){
+main {
+	margin-top: 40px;
+	width: 100%;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .item__specimen {
+		font-size: 40px;
+	}
+
+}
+
+@media screen and (max-width: 767px) {
+
+   .codrops-header__title {
+		font-size: 1em;
+	}
+
+    .item {
+	padding-top: 5vh;
+	width: 32%;
+	height: 30vh;
+   }
+
+	.item__specimen {
+		font-size: 30px;
+	}
+	.item__reference{
+		font-size: 10px;
+	}
+	.item__title,
+   .item__subtitle {
+	display: none;
+}
+	.item__svg {
+		min-height: 160px;
+	}
+}

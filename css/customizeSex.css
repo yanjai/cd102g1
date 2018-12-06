@@ -1,0 +1,494 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/*模組CSS button start*/
+/*按鈕1 start*/
+button {
+  font-family: "微軟正黑體";
+  font-size: 16px;
+  background: #07336e;
+  color: #fff;
+  border: none;
+  padding: 8px 15px; }
+  button a {
+    color: #fff;
+    text-decoration: none; }
+
+button:hover {
+  background: #30abdb;
+  cursor: pointer; }
+
+/*按鈕1 end*/
+/*按鈕2 start*/
+.button {
+  background-color: #7eafc7;
+  color: #fff;
+  text-align: center;
+  transition: all 0.5s;
+  display: inline-block;
+  cursor: pointer;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 20px; }
+  .button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.4s; }
+    .button span a {
+      color: #fff;
+      text-decoration: none; }
+
+.button {
+  margin-bottom: 800px; }
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s; }
+
+.button:hover {
+  background: #59a9ba; }
+  .button:hover span {
+    padding-right: 25px; }
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0; }
+
+/*按鈕2 end*/
+/*模組CSS button end*/
+/*內頁公版 header、footer CSS start*/
+body.content {
+  background-image: url("../images/body-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom right; }
+
+nav ul li {
+  display: inline-block;
+  text-align: center; }
+
+nav ul li a {
+  text-align: center; }
+
+/*nav ul li a:after {
+  content: "";
+  display: block;
+  width: 0;
+  padding: 0 0 6px 0;
+  border-bottom: 2px solid #3db7e4;
+  transition: width 0.3s ease-in-out;
+  margin: auto; }*/
+
+nav .navmenu li a:hover {
+  color: #3db7e4; }
+
+nav .navmenu li a:hover:after {
+  width: 100%; }
+
+nav {
+  background-image: url("../images/header.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10; }
+
+nav a {
+  color: #fff;
+  text-decoration: none; }
+
+/*nav logo*/
+.logobox {
+  width: 120px;
+  height: 130px;
+  box-shadow: 3px 3px 16px 6px rgba(20, 20, 20, 0.4);
+  border-radius: 0 0 1000px 1000px;
+  background-color: #123a6f;
+  position: absolute;
+  transition: 0.5s;
+  z-index: 3;
+  top: 0;
+  left: 5%; }
+
+.logobox img {
+  width: 90%;
+  margin: 5%;
+  height: auto; }
+
+/*nav manu*/
+.navbar {
+  width: 100vw;
+  height: 90px;
+  background-color: #123a6f;
+  box-shadow: 3px 3px 16px 6px rgba(20, 20, 20, 0.4);
+  padding: 0 5%;
+  box-sizing: border-box;
+  position: fixed;
+  transition: .5s; }
+
+.top {
+  float: right; }
+
+.clearfix {
+  clear: both; }
+
+.headerIcon {
+  transition: 0.5s;
+  display: flex;
+  flex-direction: row; }
+
+.headerIcon li {
+  color: #fffffe;
+  font-size: 20px;
+  padding: 10px 0px 5px 10px;
+  box-sizing: border-box; }
+
+/*menu */
+.navContainer {
+  float: right;
+  box-sizing: border-box; }
+
+.navmenu {
+  margin-right: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end; }
+
+.navmenu li {
+  padding: 15px;
+  box-sizing: border-box; }
+
+input#checkboxMenu {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 9px; }
+
+/*content start*/
+.contentArea {
+  max-width: 1200px;
+  margin: auto; }
+
+footer {
+  background: #041748;
+  padding: 20px; }
+
+footer p {
+  color: #fff;
+  text-align: center; }
+
+.content button {
+  margin-bottom: 100px; }
+
+.gotoTop {
+  position: fixed;
+  right: -30px;
+  bottom: 10px;
+  z-index: 10; }
+  .gotoTop img {
+    width: 60%; }
+
+.gotoTop span {
+  position: fixed;
+  right: 83px;
+  bottom: 81px;
+  color: #fff; }
+
+.addtop {
+  max-height: 100px;
+  position: relative;
+  top: -10px;
+  transition: 0.5s; }
+
+.lo {
+  width: 8%; }
+
+.Swid {
+  width: 6%; }
+
+.headerIcon li a:hover {
+  color: #ffb242;
+  cursor: pointer; }
+
+.headerIcon li i:hover {
+  color: #ffb242;
+  cursor: pointer; }
+
+/*內頁公版 header、footer end*/
+.navmenu li .cucustonav {
+  color: #3db7e4; }
+
+.navmenu li .cucustonav:after {
+  content: "";
+  display: block;
+  width: 80px; }
+
+#fish {
+  width: 200px;
+  position: fixed;
+  top: 400px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  animation: bounceInDown 5s;
+  z-index: 999;
+  text-align: center; }
+  #fish img {
+    width: 50%;
+    z-index: 999; }
+  #fish #dag {
+    position: absolute;
+    left: 90px;
+    bottom: 110px;
+    width: 80%;
+    z-index: 999; }
+  #fish p {
+    color: #666;
+    width: 60%;
+    font-size: 18px;
+    line-height: 20px;
+    position: absolute;
+    left: 110px;
+    bottom: 150px;
+    z-index: 999; }
+
+.cuWrap {
+  background-image: url("../images/content.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-attachment: fixed; 
+  position: relative;}
+
+.cuTitle {
+  padding-bottom: 70px;
+  padding-top: 70px;
+  max-width: 1200px;
+  margin: auto;
+  text-align: center; }
+
+.cuTitle h3 {
+  width: 150px;
+  margin: auto;
+  color: #1a1572;
+  position: relative; }
+
+.cuTitle h3:after {
+  content: '';
+  margin: auto;
+  display: block;
+  width: 60%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -10px;
+  border: 1px solid #001c58; }
+
+.cuSexContent {
+  display: flex;
+  position: relative;
+  margin-top: 50px;
+  margin-bottom: 50px; }
+
+.cuPro {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  text-align: center;
+  padding: 5px; }
+
+.cuPro span {
+  font-weight: 900;
+  font-size: 26px; }
+
+.cuPro2 span,
+.cuPro2 p,
+.cuPro3 span,
+.cuPro3 p,
+.cuPro4 span,
+.cuPro4 p {
+  color: #fff; }
+
+.cuMan, .cuWoman {
+  text-align: center;
+  font-size: 0;
+  width: 50%;
+  position: relative; }
+
+.cuManFront {
+  position: relative;
+  animation: cuMan01 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate; }
+
+.cuWomanFront {
+  position: relative;
+  animation: cuWoman01 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate; }
+
+.cuMan button, .cuWoman button {
+  margin-top: 20px;
+  background-color: rgba(255, 255, 255, 0.4); }
+
+#bubbles {
+  /* background-color:  #CCC; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2; }
+
+@keyframes cuMan01 {
+  from {
+    top: 0px;
+    transform: rotateY(0deg); }
+  to {
+    top: -20px;
+    transform: rotateY(15deg); } }
+
+@keyframes cuWoman01 {
+  from {
+    top: -20px;
+    transform: rotateY(0deg); }
+  to {
+    top: 0px;
+    transform: rotateY(15deg); } }
+
+.cuSexContent .cuMan,
+.cuSexContent .cuWoman {
+  display: none; }
+
+.cuSexContent .cuMan.active {
+  animation: fadeInLeft 1.5s; }
+
+.cuSexContent .cuWoman.active {
+  animation: fadeInRight 1.5s; }
+
+  p,span{
+    color: #333;
+  }
+  #memName{
+    color:#ffe;
+  }
+@media all and (max-width: 767px) {
+  #bubbles {
+    display: none; }
+  .navbarBottom {
+    display: none; }
+  .navbarBottom p {
+    display: none; }
+  .cuTitle {
+    display: none; }
+  .cuContentArea {
+    width: 100%;
+    margin: auto; }
+  .cuSexContent {
+    width: 100%; }
+  .cuProcrss {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    padding: 0px 10px;
+    box-sizing: border-box; }
+  .cuPro {
+    line-height: 40px;
+    width: 50px;
+    height: 50px;
+    margin: 0 5px; }
+  .cuPro p {
+    display: none; }
+  .cuProcrss img {
+    width: 10%;
+    display: none; }
+  .cuManFront img, .cuManBack img {
+    width: 70%; }
+  .cuWomanFront img, .cuWomanBack img {
+    width: 71%; } }
+
+@media screen and (min-width: 768px) {
+  #bubbles {
+    display: none; }
+  .cuContentArea {
+    max-width: 100%;
+    margin: auto; }
+  .cuSexContent {
+    width: 100%; }
+  .cuProcrss {
+    width: 592px;
+    margin: 20px auto; }
+  .cuPro {
+    line-height: 45px;
+    width: 90px;
+    height: 90px; }
+  .cuProcrss img {
+    width: 10%;
+    margin: 0px 5px; }
+  .cuManFront img, .cuManBack img {
+    width: 50%; }
+  .cuWomanFront img, .cuWomanBack img {
+    width: 51%; } }
+
+@media all and (min-width: 1200px) {
+  #bubbles {
+    display: block; }
+  .cuContentArea {
+    max-width: 1200px;
+    margin: auto;
+    margin-bottom: 5%; }
+  .cuSexContent {
+    width: 1000px;
+    margin: 50px auto; } }

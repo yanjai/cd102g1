@@ -1,0 +1,806 @@
+/*  *{
+      outline: 1px solid #f00;
+     } 
+*/
+    body{
+      position: relative;
+      width: 100vw;
+      overflow-x: hidden;
+     }
+     .contentArea{
+      min-height: 100vh;
+     }
+
+/*
+     ==============================\
+     .headBanner
+     ==============================*/
+  .headBanner1{
+      width: 100%;
+      margin:auto;
+      
+      /*background: #fff;*/
+      font-size: 14px;
+      color:#000;
+      z-index: 0;
+      margin: 0 auto;
+      margin-top: -100px;
+      padding: 0;
+      position: relative;
+      overflow-x: hidden;
+ }
+
+.divinggear:after{
+  content: "";
+  display: block;
+  width: 100%;
+  padding: 0 0 6px 0;
+  border-bottom: 2px solid #3db7e4;
+  margin: auto; }
+
+.divinggear {
+  color: #3db7e4; }
+
+
+
+
+    /*=========================/
+    content box
+    ==========================*/
+
+    .gearcontentArea{
+      position: relative;
+      max-width: 1200px;
+      margin: 0 auto;
+
+    } 
+
+ /*===============================
+     gearMenu
+     ===============================*/
+     #gearMenu{
+      width: 100%;
+      text-align: center;
+      padding: 2% 0;
+     } 
+     h3{
+      display: block;
+      padding:0 0  2% 0;
+      color: #fff;
+     }
+    #gearMenu div{
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      text-align: center;
+      
+    }
+    #gearMenu div:before{
+     content: '';
+     display: block;
+     width: 60%;
+     margin: 0 auto;
+     margin-bottom: 2%;
+     height: 2px;
+     background-color: #fff;
+     position: absolute;
+    }
+     #gearMenu div span{
+      cursor: pointer;
+      padding: 2%;
+      color: #fffffe;
+      font-size: 16px;
+      position: relative;
+      white-space:nowrap;
+     }    
+     .gearactive{
+      display: block;
+      width: auto;
+      height: 80%;
+      border-bottom: 1px solid rgba(255,255,255,.3);
+     }
+
+    /*===============================
+     gearlist php
+     ===============================*/
+    #gearlist{
+       width:100%;
+       text-align: left;
+       margin: auto;
+    }
+    .gearitem{
+      width: 100%;
+      padding-bottom: 5vw;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap; 
+      justify-content: flex-start;
+     }
+    #gearlist .gItem{
+      cursor: pointer;
+      width: 20%;
+      height:320px;
+      overflow: hidden;
+      padding: 1%;
+      position: relative;
+      box-sizing: border-box;
+      transition: .5s;
+      border-radius: 10px;
+      border:0px;
+    }
+  /*  #gearlist .gItem:hover{
+      box-shadow: 4px 6px 16px 8px rgba(20,20,20,.3);
+      transform: scale(1.02);
+      z-index: 1;
+    }*/
+    .gearDetails{
+      width: 96%;
+      height:96%;
+      margin: 2%;
+      left: 0;
+      position: absolute;
+      transition: .5s;
+    }
+    @media screen and (min-width: 768px){
+
+    #gearlist .gItem:hover .gearPic img{
+      transform: scale(1.5);
+      }
+    .gItem:hover{
+      animation: fourBorder 1s forwards;
+    }
+
+    @keyframes fourBorder{
+      0%{
+        border: 0px;
+      }
+      25%{
+        border-top: 1px solid #eee;
+      }
+      50%{
+        border-top: 1px solid #eee;
+        border-left: 1px solid #eee;
+      }
+      75%{
+        border-top: 1px solid #eee;
+        border-left: 1px solid #eee;
+        border-bottom: 1px solid #eee;
+      }
+      100%{
+         border-top: 1px solid #eee;
+        border-left: 1px solid #eee;
+        border-bottom: 1px solid #eee;
+        border-right: 1px solid #eee;
+      }
+    }
+
+    }
+   .gearPic{
+      width:100%;
+      height: 210px;
+      overflow: hidden;
+      margin-bottom: 5px;
+    }
+   .gearPic img{
+      width: 100%;
+      transition: .5s;
+    }
+    .gearPrice{
+      display: block;
+      width: 35%;
+      line-height:30px;
+      text-align: center;
+      box-sizing: border-box;
+      background-color: orange;
+      border-radius: 5px;
+      margin-right: 5px;
+      color: #fff;
+      transition: .5s;
+      float: left;
+      margin-top: 5px;
+    }
+    .viewinfo{
+      display: block;
+      width:35%;
+      margin-top: 5px;
+      line-height: 30px;
+      color: #fff;
+      box-sizing: border-box;
+      float: left;
+      text-align: center;
+      border-radius: 5px;
+      border: .5px solid #fff;
+    }
+   .addGearCart{
+    cursor: pointer;
+    width: 100%;
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    box-sizing: border-box;
+    border: none;
+    transition: .5s;
+   }
+    .gearName{
+      width: 100%;
+      height: 48px;
+      font-size: 16px;
+      line-height: 1.5;
+      font-weight: normal;
+      color: #fff;
+    }
+    .clearfix:after{
+      content: '';
+      display:block;
+      clear: both;
+    }
+  /*  ================================
+    shopping cart view single item start
+    ================================*/
+    #gearDetails{
+      width: 100%;
+      margin: auto;
+      padding-top: 8%;
+      box-sizing: border-box;
+    }
+    .CartgItem{
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding-bottom: 200px; 
+      color: #fff;   
+    }
+    .CartgearPic{
+      width: 30%;
+      height: auto;
+      border-radius: 50%;
+    }
+    .CartgearPic img{
+      width: 100%;
+      border-radius: 50%;
+    }
+    .CartgearDetails{
+      width: 50%;
+      padding:3%;
+      box-sizing: border-box;
+    }
+    .CartgearName{
+      font-size: 28px;
+      font-weight: bold;
+      color: #fff;
+      padding: 2% 0;
+    }
+    .CartgearCode{
+      font-size: 24px;
+      padding: 2% 0;
+      font-weight: lighter;
+    }
+    .CartgearPrice{
+      font-size: 24px;
+      color: #FF8E0D;
+      font-weight: bold;
+    }
+    .CartgearInfo{
+      padding: 2%;
+      margin-top: 2%;
+      line-height: 22px;
+      /*background-color: rgba(255,255,255,.3);*/
+    }
+    .readyToCart{
+      width: 20%;
+      margin-top: 5%;
+      padding: 2%;
+      height: 100%;
+      color: #fff;
+      border:.5px solid #fff;
+      box-sizing: border-box;
+    }
+    .readyToCart fieldset label span input{
+      font-size:18px;
+      width: 45px;
+      padding:10%;
+      /* text-align: center; */
+    }
+    input[type=submit]{
+    -webkit-border-radius:0px;
+    }
+    .CartgearSize{
+      width: 150px;
+    }
+    .CartgearSize select{
+      background-color:rgba(255,255,255,.3);
+      border:.5px solid rgba(255,255,255,.4);
+      font-size: 20px;
+      line-height: 30px;
+      color: #07336e;
+
+    }
+    fieldset{
+      padding-top: 20%;
+     }
+    fieldset label span{
+      display: inline-block;
+      padding-bottom:2%;
+    }
+
+
+  /*  ================================
+    shopping cart view single item end
+    ================================*/
+ /*    add button start*/
+
+   .addGearToCart{
+    width: 100%;
+    height: 10%;
+    background-color:#07336e;
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    font-family: "微軟正黑體";
+    font-size: 16px;
+    box-sizing: border-box;
+    border: none;
+    padding: 8px 15px;
+    transition: .5s;
+    }
+
+    .addedToCart{
+      display: block;
+      text-align: center;
+      color: #fff;
+      line-height: 30px;
+    }
+    #gearlist .gItem:hover .addGearCart{
+      display: block;
+      background-color: rgba(0,0,0,0);
+     /* border:3px solid #fff;*/
+      cursor: pointer;
+    }
+
+/*    ===============================
+    shopping cart table start
+    ===============================*/
+    #shoppingCartDetails{
+      width: 100%;
+      min-height: 60vh;
+      margin-bottom: 5%;
+      background-color: rgba(255,255,255,.4);
+      box-sizing: border-box;
+      color: #07336e;
+      padding: 5% 0;
+    }
+     #shoppingCartDetails h3{
+      text-align: center;
+     }
+    .shoppingSteps{
+      width: 90%;
+      height: 120px;
+      margin: 5%;
+      border: .2px solid  rgba(255,255,255,.6);
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+    }
+    .stepsBox{
+      width: 20%;
+      height: 90%;
+      padding-top: 10px;
+      font-size: 14px;
+      line-height: 16px;
+      border: .2px solid  rgba(255,255,255,.6);
+      text-align: center;
+      box-sizing: border-box;
+    }
+    .stepsBox1{
+      background-color: rgba(200,200,200,.5);
+    }
+    #shoppingCartTable{
+      width: 90%; 
+      height: auto;
+      margin: auto;
+      border-bottom: 2px solid rgba(255,255,255,.6);
+      text-align: center;
+    }
+    .stepsBox span:nth-of-type(2){
+      font-size: 40px;
+      line-height: 50px;
+    }
+    #shoppingCartTable  th{
+      line-height: 28px;
+      font-weight: bold;
+      padding: 0;
+    }
+    .tableSize{
+      width: 8%;
+    }
+    .tableQty{
+      width: 12%;
+    }
+    .tableImg,
+    .unitPrice,
+    .tableRemove,
+    .tableSubtotal{
+      width: 10%;
+    }
+    .gearNameHeading{
+      width: 40%;
+    }
+    .removeBtn{
+      padding-top: 30%;
+      background-color: rgba(1,1,1,0);
+     }
+ 
+    #shoppingCartTable th:after{
+      content: '';
+      display: block;
+      width: 100%;
+      margin:0 auto;
+      height: 3px;
+      background-color: #fff;
+    }
+    #shoppingCartTable tr th{
+       max-width:100px;
+       box-sizing: border-box;
+    }
+    #shoppingCartTable tr td{
+       vertical-align: middle;
+       padding: 2%;
+    }
+    #shoppingCartTable tr td a{
+      color: #07336E;
+    }
+    .cartImg{
+      width: 80px;
+      padding: 0;
+     }
+     .cartImg img{
+      width: 60%;
+      display: block;
+     }
+    .adjQty span{
+      display: inline-flex;
+    }
+    .adjQty span input{
+      line-height: 22px;
+      width: 20px;
+      border: .5px solid  #07336E;
+      background-color: #fff;
+
+    }
+    #cartTotal{
+      width: 90%; 
+      margin: 0 auto;
+      margin-top: 1%;
+      text-align: right;
+      font-size: 16px;
+    }
+    .cartB_n_N{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+
+    }
+     #keepshopping a{
+      display: block;
+      color: #fff;
+      text-decoration: none;
+     }
+    #keepshopping,
+    #checkOutBox{
+       display: block;
+       text-decoration: none;
+       color:#fff;
+       width: 100px;
+       line-height:40px;
+       background-color:#07336e; 
+       text-align: center;
+       margin:0 auto;
+       margin-top: 2%;
+       margin-bottom: 2%;
+      cursor: pointer;
+    }
+    #checkOutBox a{
+      color: #07336E;
+    }
+/*    ===============================
+    shopping cart table end
+    ===============================*/
+
+/*======================================
+take order start
+=====================================*/
+    #paymentNaddress,
+    #thanksMsgBox{
+      display: none;
+      width: 90%;
+      height: 500px;
+      margin: 0 auto;
+      padding: 1%;
+      box-sizing: border-box;
+      background-color: rgba(255,255,255,.8);
+
+     }
+     .payment,
+     .address {
+      width: 100%;
+      margin-bottom: 2%;
+      padding: 1%;
+      border: 2px solid #07336e;
+      box-sizing: border-box;
+     }
+     .payment{
+      height: 20%;
+     }
+     .address {
+      height: 76%;
+     }
+     .payment span{
+      display: block;
+       float: left;
+     }
+     .shoppingstepsRWD{
+      display: none;
+     }
+     .NextBefore{
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+     }
+     #takeOrderBefore,
+     #takeOrderNext,
+     #confirmBefore,
+     #gearOrderConfirmed,
+     #gearOrderDetails div span input{
+      display: block;
+      text-decoration: none;
+      color:#fff;
+      width: 100px;
+      line-height:40px;
+      font-size: 18px;
+      background-color:#07336e; 
+      text-align: center;
+      margin:1px;
+      margin-top: 2%;
+      margin-bottom: 2%;
+      cursor: pointer;
+      border: none;
+     }
+     #gearOrderDetails{
+      display: none;
+      width: 90%;
+      padding-bottom: 2%;
+      margin: 2% 5%;
+      background-color: rgba(255,255,255,.8);
+     }
+     #gearOrderDetails-left,
+     #gearOrderDetails-right{
+      padding: 1%;
+      width: 50%;
+      height: 200px;
+      box-sizing: border-box;
+     }
+      #gearOrderDetails-left{
+        float: left;
+      }
+      #gearOrderDetails-left h5{
+        line-height: 200px;
+        text-align: center;
+      }
+      #gearOrderDetails-right{
+        float: right;
+        padding-top: 5%;
+        line-height: 30px;
+      }
+      #gearOrderDetails-right span{
+        font-weight: bold;
+      }
+/*======================================
+take order end
+=====================================*/
+     #thanksMsgBox{
+       display: none;
+       padding: 10%;
+       box-sizing: border-box;
+       text-align: center;
+       font-size: 20px;
+       line-height: 40px;
+     }
+      #thanksMsgBox span{
+        display: block;
+        font-size: 50px;
+        line-height: 60px;
+      }
+      #thanksMsgBox div a{
+        display: block;
+        width: 120px;
+        margin: auto;
+        color: #fff;
+        text-decoration: none;
+        background-color: #07336e;
+      }
+@media screen and (max-width: 1440px){
+  .headBanner1{ 
+     padding:5% 8%;
+     box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 1200px;){
+  .gearcontentArea{
+    width: 90%;
+    }
+  .gearitem{
+    width: 96%;
+    margin: auto;
+   }
+}
+@media screen and (max-width: 992px){
+    .gearName{
+      line-height: 16px;
+      font-size:15px;
+      height: 14%;
+      margin: 1%;
+    }
+      #gearlist .gItem{
+      height:320px;
+    }
+     #gearlist .gItem{
+      width: 33.3333333%;
+      height: 300px;
+    }
+
+
+    #cartTotal,
+    #shoppingCartDetails table{
+      width: 96%; }
+
+}
+@media screen and (max-width: 767px){
+  .logobox{
+    width: 70px;
+    height: 75px;
+  }
+  .headBanner1{
+    padding: 2%;
+  }
+   .divinggear:after{
+    content: "";
+    display: none;}
+
+     .gearcontentArea{
+      padding-top: 5%;
+     }
+     #gearlist .gItem{
+      width: 50%;
+      height:280px;
+    }
+   .gearPic{
+      width:100%;
+      height: 160px;
+    }
+    #gearMenu{
+      padding: 0;
+    }
+    #gearMenu div{
+      width: 100%;
+      display: none;
+    }
+    .gearName{
+      margin: 1%;
+      height: 60px;
+      line-height: 18px;
+      font-size:16px;
+      font-weight: normal;
+    }   
+    .CartgItem{
+      width: 100%;
+      flex-direction: column;   
+    }
+    .viewinfo{
+      width: 56%;
+    }
+    .CartgearPic{
+      width: 80vw;
+      height: auto;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+    .CartgearDetails{
+      width: 80vw;
+      margin: auto;
+      padding: 0;
+      float: none;
+    }
+    .readyToCart{
+      width:80vw;
+      margin: auto;
+      height: auto;
+    }
+     .CartgearPic{
+      width: 50%;
+      padding: 2%;
+      margin: auto;
+     }
+    .addGearToCart{
+     width: 50%;
+     margin: auto;
+   }
+    #shoppingCartDetails{
+      border: none;
+      padding: 2%;
+    }
+    #shoppingCartTable th{
+      display: none;
+    }
+    #shoppingCartDetails h3{
+      padding: 2% 0;
+    }
+   #shoppingCartTable{
+      width: 100%;
+      font-size: 14px;
+      border-bottom: 1px solid rgba(255,255,255,.6);
+    }
+    #shoppingCartTable tr td {
+      padding: 0.5%;
+    }
+    #shoppingCartTable tr{
+      border-top: 1px solid rgba(255,255,255,.6);
+
+    }
+    .shoppingSteps{
+      display: none;
+    }
+    .tableSize{
+      width: 7%;
+    }
+    .cartImg{
+      width: 8%;
+    }
+    .tableRemove{
+      width: 5%;
+    }
+    .unitPrice{
+      width: 10%;
+    }
+    .tableQty{
+      width: 30%;
+    }
+    .cartGearName{
+      width: 35%;
+    }
+    .cartSize{
+      width: 5%;
+    }
+    .cartsubtotal{
+      display: none;
+    }
+    .cartImg img{
+      width: 100%;
+     }
+
+     #gearOrderDetails{
+      padding: 5%;
+      box-sizing: border-box;
+     }
+     #gearOrderDetails-left{
+      width: 100%;
+      height: 50px;
+     }
+     #gearOrderDetails-left h5{
+      line-height: 50px;
+     }
+     #gearOrderDetails-right{
+      width: 100%;
+     }
+}
